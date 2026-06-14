@@ -1,0 +1,227 @@
+[gd_scene format=3 uid="uid://3vphyjqgfklx"]
+
+[ext_resource type="Script" uid="uid://ck6yqlrolpbld" path="res://enemics/robot/robot.gd" id="1_btsed"]
+[ext_resource type="Texture2D" uid="uid://chgdtv0k0w8r1" path="res://enemics/robot/robot_moviments_transparent-removebg-preview.png" id="2_o0caf"]
+[ext_resource type="Script" uid="uid://vj3qk8m8x8jm" path="res://enemics/robot/gunRobot.gd" id="3_btsed"]
+[ext_resource type="AudioStream" uid="uid://b8qm7kydk21c" path="res://enemics/robot/audiopapkin-closing-metal-container-for-garbage-303735.mp3" id="4_btsed"]
+[ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="5_ud8pb"]
+[ext_resource type="AudioStream" uid="uid://dm7wsawmylc7b" path="res://enemics/BigBosses/Serp/enemy/hit.wav" id="6_wge1a"]
+[ext_resource type="AudioStream" uid="uid://duwm7i44o75o2" path="res://enemics/BigBosses/Serp/enemy/explode.wav" id="7_4yn3r"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2ld0j"]
+
+[sub_resource type="Animation" id="Animation_x52lg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_n80ee"]
+resource_name = "dead"
+length = 0.6
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.12669751, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [22, 23]
+}
+
+[sub_resource type="Animation" id="Animation_sfeqg"]
+resource_name = "dispara"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [11, 12, 13, 15]
+}
+
+[sub_resource type="Animation" id="Animation_5nbw6"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0009999999, 0.23333333, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_sfg8u"]
+resource_name = "tocat"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [16, 17, 18, 20]
+}
+
+[sub_resource type="Animation" id="Animation_5pviw"]
+resource_name = "walk"
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1cv7g"]
+_data = {
+&"RESET": SubResource("Animation_x52lg"),
+&"dead": SubResource("Animation_n80ee"),
+&"dispara": SubResource("Animation_sfeqg"),
+&"idle": SubResource("Animation_5nbw6"),
+&"tocat": SubResource("Animation_sfg8u"),
+&"walk": SubResource("Animation_5pviw")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0d54x"]
+radius = 31.99998
+height = 79.99996
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8rb1q"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_mqhhs"]
+offsets = PackedFloat32Array(0.5, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7a5j"]
+size = Vector2(88, 68)
+
+[node name="EnemyRobot" type="CharacterBody2D" unique_id=1978271977]
+collision_layer = 2
+collision_mask = 24
+script = ExtResource("1_btsed")
+
+[node name="PlatformDetector" type="RayCast2D" parent="." unique_id=2140893464]
+position = Vector2(0, 6)
+target_position = Vector2(0, 8)
+collision_mask = 8
+
+[node name="FloorDetectorLeft" type="RayCast2D" parent="." unique_id=25047567]
+position = Vector2(-15, 19)
+target_position = Vector2(0, 35)
+collision_mask = 24
+
+[node name="FloorDetectorRight" type="RayCast2D" parent="." unique_id=709127067]
+position = Vector2(15.5, 19)
+target_position = Vector2(0, 35)
+collision_mask = 24
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=939454137]
+material = SubResource("CanvasItemMaterial_2ld0j")
+texture = ExtResource("2_o0caf")
+hframes = 5
+vframes = 5
+
+[node name="Gun" type="Marker2D" parent="Sprite2D" unique_id=1150178215]
+light_mask = 2
+visibility_layer = 40
+position = Vector2(14, 1)
+script = ExtResource("3_btsed")
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="Sprite2D/Gun" unique_id=639027861]
+position = Vector2(-30.6589, -6.13176)
+stream = ExtResource("4_btsed")
+volume_db = 5.0
+
+[node name="Cooldown" type="Timer" parent="Sprite2D/Gun" unique_id=730999416]
+wait_time = 0.3
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1800712692]
+libraries/ = SubResource("AnimationLibrary_1cv7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1380542087]
+position = Vector2(0, -6)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_0d54x")
+
+[node name="Explosion" type="CPUParticles2D" parent="." unique_id=1655012714]
+self_modulate = Color(1, 1, 1, 0.12)
+material = SubResource("CanvasItemMaterial_8rb1q")
+emitting = false
+amount = 32
+texture = ExtResource("5_ud8pb")
+lifetime = 0.5
+one_shot = true
+speed_scale = 1.2
+explosiveness = 0.7
+draw_order = 215832976
+emission_shape = 1
+emission_sphere_radius = 16.0
+spread = 180.0
+gravity = Vector2(0, -250)
+color_ramp = SubResource("Gradient_mqhhs")
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="." unique_id=2053677075]
+stream = ExtResource("6_wge1a")
+
+[node name="Explode" type="AudioStreamPlayer2D" parent="." unique_id=763341982]
+stream = ExtResource("7_4yn3r")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1911328125]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1158515320]
+position = Vector2(1, -6)
+shape = SubResource("RectangleShape2D_y7a5j")
+
+[node name="Tocat" type="Timer" parent="." unique_id=280060069]
+one_shot = true
+
+[node name="TocatDead" type="Timer" parent="." unique_id=822067762]
+one_shot = true
+
+[node name="Disparar" type="Timer" parent="." unique_id=1683773480]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="Sprite2D/Gun/Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Tocat" to="." method="_on_tocat_timeout"]
+[connection signal="timeout" from="TocatDead" to="." method="_on_tocat_dead_timeout"]
+[connection signal="timeout" from="Disparar" to="." method="_on_disparar_timeout"]

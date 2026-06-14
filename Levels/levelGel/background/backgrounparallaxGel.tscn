@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cl12obnubqmyf"]
+
+[ext_resource type="Texture2D" uid="uid://biss4glqfbcrm" path="res://Levels/levelPolucio/background/ChatGPT Image 9 de març del 2026, 16_11_54.png" id="1_anjar"]
+[ext_resource type="Texture2D" uid="uid://hdtsa5htj2cg" path="res://Levels/levelGel/background/background_gel.png" id="2_ps8sa"]
+
+[node name="BackgrounparallaxGel" type="ParallaxBackground" unique_id=835670118]
+
+[node name="Sky" type="ParallaxLayer" parent="." unique_id=1112415689]
+motion_scale = Vector2(0.2, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sky" unique_id=514364163]
+visible = false
+position = Vector2(-809, 58)
+texture = ExtResource("1_anjar")
+centered = false
+
+[node name="Sprite2" type="Sprite2D" parent="Sky" unique_id=1140569775]
+position = Vector2(-809, -252.00002)
+scale = Vector2(1.7177736, 1.8846881)
+texture = ExtResource("2_ps8sa")
+centered = false

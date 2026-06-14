@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://2yfrtacc588v"]
+
+[ext_resource type="Texture2D" uid="uid://r1bwbnrnrki7" path="res://Levels/levelDesert/tileSetBigBoss/Gemini_Generated_Image_l1f6m3l1f6m3l1f6.png" id="1_unaca"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pssdl"]
+size = Vector2(87, 36)
+
+[node name="Platformsmall" type="AnimatableBody2D" unique_id=1880110600]
+collision_layer = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=499404940]
+position = Vector2(3.000001, 7.75)
+scale = Vector2(0.40677968, 0.7075472)
+texture = ExtResource("1_unaca")
+region_enabled = true
+region_rect = Rect2(232.83192, 0.28279114, 118.74733, 53.97605)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=323477337]
+position = Vector2(-39, 7.75)
+scale = Vector2(0.33898303, 0.7075472)
+texture = ExtResource("1_unaca")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(232.83192, 0.28279114, 118.74733, 53.97605)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1301709868]
+position = Vector2(-15.5, 8)
+shape = SubResource("RectangleShape2D_pssdl")
+one_way_collision = true

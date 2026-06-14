@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bhm0xrs4wulet"]
+
+[ext_resource type="Script" uid="uid://2078bnnk7lw0" path="res://game.gd" id="1_1d7o6"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="2_31wx3"]
+[ext_resource type="PackedScene" uid="uid://d2xm88twn1i2b" path="res://Levels/levelGel/levelgelprimer.tscn" id="2_lpcvm"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_ig0l0"]
+[ext_resource type="PackedScene" uid="uid://cr788n3jtq7ii" path="res://gui/hud_game.tscn" id="3_lpcvm"]
+
+[node name="GameSingleplayerGelFirst" type="Node" unique_id=1608992767]
+script = ExtResource("1_1d7o6")
+
+[node name="Levelgelprimer" parent="." unique_id=910640091 instance=ExtResource("2_lpcvm")]
+
+[node name="Player" parent="Levelgelprimer" unique_id=176979495 instance=ExtResource("3_ig0l0")]
+position = Vector2(76.00001, 527.00006)
+collision_mask = 31
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=810435371]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" unique_id=1550845476 instance=ExtResource("2_31wx3")]
+metadata/_edit_use_anchors_ = true
+
+[node name="InterfaceLayer2" type="CanvasLayer" parent="." unique_id=2063241457]
+layer = 100
+
+[node name="HudGame" parent="InterfaceLayer2" unique_id=1225320713 instance=ExtResource("3_lpcvm")]
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="refresh_life" from="." to="InterfaceLayer2/HudGame" method="_on_refresh_life"]
+[connection signal="EnemyDead" from="Levelgelprimer" to="Levelgelprimer" method="_on_enemy_dead"]
+[connection signal="NivellAcabat" from="Levelgelprimer" to="." method="_on_level_nivell_acabat"]
+[connection signal="coin_collected" from="Levelgelprimer/Player" to="InterfaceLayer2/HudGame" method="_on_coin_collected"]
+[connection signal="playerDead" from="Levelgelprimer/Player" to="InterfaceLayer2/HudGame" method="_on_player_dead"]
+[connection signal="refresh_life" from="Levelgelprimer/Player" to="InterfaceLayer2/HudGame" method="_on_player_refresh_life"]
+[connection signal="playerDead" from="InterfaceLayer2/HudGame" to="InterfaceLayer2/HudGame" method="_on_player_dead"]

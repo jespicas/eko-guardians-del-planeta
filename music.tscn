@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://do7htx4sqmcnh"]
+
+[ext_resource type="AudioStream" uid="uid://do87r5muxrkn4" path="res://Pulso del Planeta.ogg" id="1_3h6ak"]
+
+[node name="Music" type="AudioStreamPlayer" unique_id=1233281708]
+process_mode = 1
+stream = ExtResource("1_3h6ak")
+volume_db = -3.0
+autoplay = true
+parameters/looping = false

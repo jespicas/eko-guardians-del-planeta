@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://b3bpdxj8hsy8t"]
+
+[ext_resource type="Texture2D" uid="uid://bbfv0s1ck5hly" path="res://Levels/levelBosc/platforms/moving_platform.webp" id="1_bwryt"]
+[ext_resource type="Material" uid="uid://djwm5nol3d801" path="res://Levels/levelDesert/props/wind_sway.tres" id="2_btcw2"]
+[ext_resource type="Texture2D" uid="uid://bj6am5nfc0k73" path="res://Levels/levelDesert/props/grass_1.webp" id="3_dsmiq"]
+[ext_resource type="Texture2D" uid="uid://upfcr5xg5fvh" path="res://Levels/levelDesert/props/grass_3.webp" id="4_tyk12"]
+[ext_resource type="Texture2D" uid="uid://bju7r7jqn8bqy" path="res://Levels/levelDesert/props/grass_2.webp" id="5_ufuyb"]
+[ext_resource type="Texture2D" uid="uid://cqydct6vajobg" path="res://Levels/levelDesert/props/bush_1.webp" id="6_jdkci"]
+[ext_resource type="Texture2D" uid="uid://bvu4vgnc84r84" path="res://Levels/levelDesert/props/vine_1.webp" id="7_pg3i1"]
+[ext_resource type="Texture2D" uid="uid://bu54lwrkcng25" path="res://Levels/levelDesert/props/vine_2.webp" id="8_m0326"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(176, 27)
+
+[node name="Platform" type="AnimatableBody2D" unique_id=225957258]
+z_index = -1
+position = Vector2(-1, 0)
+collision_layer = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1706757863]
+texture = ExtResource("1_bwryt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2071345879]
+position = Vector2(1, -19)
+shape = SubResource("1")
+one_way_collision = true
+
+[node name="g67" type="Sprite2D" parent="." unique_id=1460716037]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(77, -37)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_dsmiq")
+
+[node name="g69" type="Sprite2D" parent="." unique_id=1609458590]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(-1.99999, -38)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_dsmiq")
+
+[node name="g68" type="Sprite2D" parent="." unique_id=525072388]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(-52, -35)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_dsmiq")
+
+[node name="g1" type="Sprite2D" parent="." unique_id=1625950543]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(-36, -35)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_tyk12")
+
+[node name="g3" type="Sprite2D" parent="." unique_id=1244335716]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(-82, -33)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_tyk12")
+
+[node name="g2" type="Sprite2D" parent="." unique_id=1379492293]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(31, -36)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_tyk12")
+
+[node name="g4" type="Sprite2D" parent="." unique_id=135006508]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(-22, -30)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_tyk12")
+
+[node name="g14" type="Sprite2D" parent="." unique_id=1301311499]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(51, -38)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_ufuyb")
+
+[node name="g17" type="Sprite2D" parent="." unique_id=1776040956]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(65, -32)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_ufuyb")
+
+[node name="g16" type="Sprite2D" parent="." unique_id=961360488]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(17, -36)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_ufuyb")
+
+[node name="g15" type="Sprite2D" parent="." unique_id=1137531430]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(-71, -35)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_ufuyb")
+
+[node name="B3" type="Sprite2D" parent="." unique_id=420959074]
+visible = false
+z_index = -2
+material = ExtResource("2_btcw2")
+position = Vector2(-2, -58)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("6_jdkci")
+
+[node name="B4" type="Sprite2D" parent="." unique_id=834060271]
+visible = false
+z_index = -2
+material = ExtResource("2_btcw2")
+position = Vector2(37, -42)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("6_jdkci")
+
+[node name="B5" type="Sprite2D" parent="." unique_id=667322216]
+visible = false
+z_index = -2
+material = ExtResource("2_btcw2")
+position = Vector2(-32, -41)
+texture = ExtResource("6_jdkci")
+
+[node name="v31" type="Sprite2D" parent="." unique_id=113225465]
+visible = false
+z_index = 1
+material = ExtResource("2_btcw2")
+position = Vector2(-21, 18)
+scale = Vector2(1, -1)
+texture = ExtResource("7_pg3i1")
+
+[node name="v35" type="Sprite2D" parent="." unique_id=800229758]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(35, 7)
+scale = Vector2(1, -1)
+texture = ExtResource("7_pg3i1")
+
+[node name="v32" type="Sprite2D" parent="." unique_id=1265514523]
+visible = false
+z_index = 1
+material = ExtResource("2_btcw2")
+position = Vector2(87, 16)
+scale = Vector2(1, -1)
+texture = ExtResource("7_pg3i1")
+
+[node name="v33" type="Sprite2D" parent="." unique_id=1309436748]
+visible = false
+z_index = 1
+material = ExtResource("2_btcw2")
+position = Vector2(-85, 15)
+scale = Vector2(1, -1)
+texture = ExtResource("8_m0326")
+
+[node name="v34" type="Sprite2D" parent="." unique_id=531224870]
+visible = false
+z_index = 1
+material = ExtResource("2_btcw2")
+position = Vector2(56, 18)
+scale = Vector2(1, -1)
+texture = ExtResource("8_m0326")
+
+[node name="v36" type="Sprite2D" parent="." unique_id=452620901]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(-9, 11)
+scale = Vector2(1, -1)
+texture = ExtResource("8_m0326")
+
+[node name="v37" type="Sprite2D" parent="." unique_id=675674907]
+visible = false
+z_index = -1
+material = ExtResource("2_btcw2")
+position = Vector2(-61, 7)
+scale = Vector2(1, -1)
+texture = ExtResource("8_m0326")

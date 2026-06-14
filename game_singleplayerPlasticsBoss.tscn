@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b54hgp8typao4"]
+
+[ext_resource type="Script" uid="uid://2078bnnk7lw0" path="res://game.gd" id="1_2mi7f"]
+[ext_resource type="PackedScene" uid="uid://c7ujjqlrbqu7p" path="res://Levels/levelPlastics/levelPlasticsBos.tscn" id="2_2mi7f"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_7a68d"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_kaq5q"]
+[ext_resource type="PackedScene" uid="uid://cr788n3jtq7ii" path="res://gui/hud_game.tscn" id="5_oh8nx"]
+
+[node name="Game" type="Node" unique_id=1903511560]
+script = ExtResource("1_2mi7f")
+
+[node name="LevelPlasticsBoss" parent="." unique_id=134644652 instance=ExtResource("2_2mi7f")]
+position = Vector2(1, 10)
+
+[node name="Player" parent="LevelPlasticsBoss" unique_id=176979495 instance=ExtResource("3_7a68d")]
+z_index = 1
+position = Vector2(407.99997, 90.99999)
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=507327]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" unique_id=1550845476 instance=ExtResource("4_kaq5q")]
+metadata/_edit_use_anchors_ = true
+
+[node name="InterfaceLayer2" type="CanvasLayer" parent="." unique_id=2130355248]
+layer = 100
+
+[node name="HudGame" parent="InterfaceLayer2" unique_id=1225320713 instance=ExtResource("5_oh8nx")]
+metadata/_edit_use_anchors_ = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="refresh_life" from="." to="InterfaceLayer2/HudGame" method="_on_refresh_life"]
+[connection signal="EnemyDead" from="LevelPlasticsBoss" to="LevelPlasticsBoss" method="_on_enemy_dead"]
+[connection signal="NivellAcabat" from="LevelPlasticsBoss" to="." method="_on_level_nivell_acabat"]
+[connection signal="coin_collected" from="LevelPlasticsBoss/Player" to="InterfaceLayer2/HudGame" method="_on_player_coin_collected"]
+[connection signal="playerDead" from="LevelPlasticsBoss/Player" to="InterfaceLayer2/HudGame" method="_on_player_dead"]
+[connection signal="refresh_life" from="LevelPlasticsBoss/Player" to="InterfaceLayer2/HudGame" method="_on_player_refresh_life"]
+[connection signal="playerDead" from="InterfaceLayer2/HudGame" to="InterfaceLayer2/HudGame" method="_on_player_dead"]

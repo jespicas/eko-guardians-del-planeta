@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://do87r5muxrkn4"
+path="res://.godot/imported/Pulso del Planeta.ogg-2351d2d8d43e47e2866e78c05e106617.oggvorbisstr"
+
+[deps]
+
+source_file="res://Pulso del Planeta.ogg"
+dest_files=["res://.godot/imported/Pulso del Planeta.ogg-2351d2d8d43e47e2866e78c05e106617.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

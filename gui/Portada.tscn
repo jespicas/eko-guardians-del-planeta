@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c6dvvu1foaabt"]
+
+[ext_resource type="Texture2D" uid="uid://cky6ebicdeb8w" path="res://gui/Portada.png" id="1_4xjgr"]
+[ext_resource type="Script" uid="uid://dumqxbi62g4q3" path="res://gui/portada.gd" id="1_kevbo"]
+[ext_resource type="Theme" uid="uid://da4noqsij73it" path="res://gui/theme.tres" id="3_d8klo"]
+
+[node name="Portada" type="Node2D" unique_id=942262360]
+script = ExtResource("1_kevbo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=665166346]
+position = Vector2(368, 238.99998)
+scale = Vector2(0.28125, 0.30989578)
+texture = ExtResource("1_4xjgr")
+
+[node name="Panel" type="Panel" parent="." unique_id=86875987]
+offset_left = 281.0
+offset_top = 442.0
+offset_right = 478.0
+offset_bottom = 468.0
+theme = ExtResource("3_d8klo")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1563443151]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 167.0
+offset_bottom = 26.0
+text = "Prem qualsevol tecla"
+
+[node name="Timer" type="Timer" parent="." unique_id=1453841687]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

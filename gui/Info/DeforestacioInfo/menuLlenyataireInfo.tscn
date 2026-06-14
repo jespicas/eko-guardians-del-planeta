@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bxim882l6045i"]
+
+[ext_resource type="Script" uid="uid://dcp2ke0qjgx7p" path="res://gui/Info/DeforestacioInfo/menu_llenyataire_info.gd" id="1_ql1qm"]
+[ext_resource type="Texture2D" uid="uid://bb2num1hw3cqx" path="res://gui/menunivellsgranAllGreyed.png" id="2_hyjt1"]
+[ext_resource type="Texture2D" uid="uid://ck61iavsim38x" path="res://gui/Info/DeforestacioInfo/ossus_deforestacio.png" id="3_ql1qm"]
+[ext_resource type="Texture2D" uid="uid://ccsdk573ao7rs" path="res://gui/Info/DeforestacioInfo/llangardaix_deforestacio.png" id="4_hyjt1"]
+[ext_resource type="Theme" uid="uid://da4noqsij73it" path="res://gui/theme.tres" id="5_sjvly"]
+
+[node name="MenuLlenyatairetInfo" type="Control" unique_id=634457073]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ql1qm")
+
+[node name="background" type="Sprite2D" parent="." unique_id=739692880]
+position = Vector2(401.00003, 239.99998)
+scale = Vector2(0.625, 0.88)
+texture = ExtResource("2_hyjt1")
+
+[node name="EnemicOssus" type="Sprite2D" parent="." unique_id=1086056897]
+position = Vector2(612, 202)
+scale = Vector2(0.473, 0.367)
+texture = ExtResource("3_ql1qm")
+
+[node name="EnemicLlangardaix" type="Sprite2D" parent="." unique_id=783343515]
+position = Vector2(210, 202)
+scale = Vector2(0.47254395, 0.36718744)
+texture = ExtResource("4_hyjt1")
+
+[node name="Panel" type="Panel" parent="." unique_id=726371451]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 442.0
+offset_right = 478.0
+offset_bottom = 468.0
+theme = ExtResource("5_sjvly")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1573791054]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 167.0
+offset_bottom = 26.0
+text = "Prem qualsevol tecla"
+
+[node name="Timer" type="Timer" parent="." unique_id=1107180783]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

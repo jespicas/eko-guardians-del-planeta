@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cr788n3jtq7ii"]
+
+[ext_resource type="Theme" uid="uid://da4noqsij73it" path="res://gui/theme.tres" id="1_avtly"]
+[ext_resource type="Script" uid="uid://dhlwricgiy31e" path="res://gui/hud_game.gd" id="2_avtly"]
+[ext_resource type="PackedScene" uid="uid://bsyqg6eh3wl5i" path="res://gui/coins_counter.tscn" id="3_v7loy"]
+[ext_resource type="PackedScene" uid="uid://c347n6d4yg86" path="res://gui/lifes.tscn" id="4_lh48g"]
+[ext_resource type="PackedScene" uid="uid://dsl261471brsy" path="res://gui/retry.tscn" id="5_v7loy"]
+[ext_resource type="PackedScene" uid="uid://dwi7rxth8my7q" path="res://gui/LevelFinalitzat.tscn" id="6_kmovf"]
+
+[node name="HudGame" type="Control" unique_id=1225320713]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_avtly")
+script = ExtResource("2_avtly")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1215584499]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.007843138)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=2036296081]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CoinsCounter" parent="ColorRect" unique_id=1440574151 instance=ExtResource("3_v7loy")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 105.0
+offset_bottom = 50.0
+
+[node name="Vides" parent="ColorRect" unique_id=2079693460 instance=ExtResource("4_lh48g")]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 8.0
+offset_right = 792.0
+offset_bottom = 48.0
+
+[node name="Retry" parent="ColorRect" unique_id=1798279523 instance=ExtResource("5_v7loy")]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 291.0
+offset_top = 157.0
+offset_right = 501.0
+offset_bottom = 236.0
+
+[node name="LevelFinalitzat" parent="ColorRect" unique_id=320824997 instance=ExtResource("6_kmovf")]
+visible = false
+layout_mode = 0
+offset_left = 242.0
+offset_top = 177.0
+offset_right = 510.0
+offset_bottom = 328.0
+
+[connection signal="refresh_life" from="." to="." method="_on_refresh_life"]

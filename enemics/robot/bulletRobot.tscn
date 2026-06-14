@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://btqlrmr45a05i"]
+
+[ext_resource type="Script" uid="uid://ct8s2gcpeiq76" path="res://enemics/robot/bullet_robot.gd" id="1_oie82"]
+[ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="2_kuyxn"]
+[ext_resource type="Texture2D" uid="uid://c1lway026immk" path="res://enemics/robot/shoot.png" id="3_oie82"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_83y21"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_21abo"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7osgv"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_o13ul"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qk6u8"]
+gradient = SubResource("Gradient_o13ul")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0.01)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uvn3c"]
+radius = 5.0
+height = 12.0
+
+[sub_resource type="Animation" id="Animation_v7668"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="5"]
+resource_name = "destroy"
+length = 0.3
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CPUParticles2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1hu7s"]
+_data = {
+&"RESET": SubResource("Animation_v7668"),
+&"destroy": SubResource("5")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_soexo"]
+size = Vector2(12, 14)
+
+[node name="BulletRobot" type="RigidBody2D" unique_id=1833583819]
+disable_mode = 1
+script = ExtResource("1_oie82")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1474730968]
+material = SubResource("CanvasItemMaterial_83y21")
+emitting = false
+texture = ExtResource("2_kuyxn")
+lifetime = 0.1
+speed_scale = 3.0
+spread = 0.0
+gravity = Vector2(0, 0)
+color = Color(1, 1, 1, 0.705882)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1701922676]
+material = SubResource("CanvasItemMaterial_21abo")
+texture = ExtResource("3_oie82")
+
+[node name="Glow" type="Sprite2D" parent="Sprite2D" unique_id=673232441]
+visible = false
+modulate = Color(0.501961, 1, 1, 0.25098)
+material = SubResource("CanvasItemMaterial_7osgv")
+scale = Vector2(0.667, 0.667)
+texture = SubResource("GradientTexture2D_qk6u8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1626422957]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_uvn3c")
+
+[node name="Timer" type="Timer" parent="." unique_id=231340127]
+one_shot = true
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1019298488]
+libraries/ = SubResource("AnimationLibrary_1hu7s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=147849425]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1834856506]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_soexo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="destroy"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

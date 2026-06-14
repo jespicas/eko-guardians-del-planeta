@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b4pccofv2k1su"]
+
+[ext_resource type="Shader" uid="uid://niiml8hetykw" path="res://Levels/levelPlastics/levelPlastics.gdshader" id="1_0g0rd"]
+[ext_resource type="Texture2D" uid="uid://0xglsim61g2p" path="res://Levels/levelPlastics/background/background_plastics.png" id="2_204k6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jnj7w"]
+shader = ExtResource("1_0g0rd")
+shader_parameter/wave_speed = 0.5
+shader_parameter/wave_freq = 10.0
+shader_parameter/wave_width = 0.009
+shader_parameter/water_color = Color(0, 0.5, 0.8, 0.2)
+
+[node name="BackgroundParallaxPlastics" type="ParallaxBackground" unique_id=367835874]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1434847227]
+layer = -4
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2024751353]
+material = SubResource("ShaderMaterial_jnj7w")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2" type="Sprite2D" parent="." unique_id=1262177354]
+position = Vector2(-809, 0)
+scale = Vector2(1.832, 1)
+texture = ExtResource("2_204k6")
+centered = false

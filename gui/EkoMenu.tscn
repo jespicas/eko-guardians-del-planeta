@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b4p0r08vpvn5c"]
+
+[ext_resource type="Texture2D" uid="uid://d1konceh3amuo" path="res://gui/ekomenu.png" id="1_i532f"]
+
+[node name="EkoMenu" type="Node2D" unique_id=1183704086]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=564228235]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_i532f")

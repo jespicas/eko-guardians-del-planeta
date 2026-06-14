@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://cssbvigkq15e8"]
+
+[ext_resource type="Script" uid="uid://b3udst1vt4i40" path="res://enemics/BigBosses/enemyLlenyataire/gun_destral.gd" id="1_thhy6"]
+[ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="2_hhm3x"]
+[ext_resource type="Texture2D" uid="uid://cge0klru8aoe6" path="res://enemics/BigBosses/enemyLlenyataire/destral.png" id="3_o5o6p"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_43goe"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ag1be"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8cyox"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_o13ul"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_56h7e"]
+gradient = SubResource("Gradient_o13ul")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0.01)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jgav0"]
+radius = 13.892444
+
+[sub_resource type="Animation" id="Animation_v7668"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="5"]
+resource_name = "destroy"
+length = 0.3
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CPUParticles2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3dr7c"]
+resource_name = "dispar"
+length = 0.56666666
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.265732014659643]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nq1cb"]
+_data = {
+&"RESET": SubResource("Animation_v7668"),
+&"destroy": SubResource("5"),
+&"dispar": SubResource("Animation_3dr7c")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_thhy6"]
+radius = 17.029387
+
+[node name="GunDestral" type="RigidBody2D" unique_id=965153744]
+script = ExtResource("1_thhy6")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=2032012569]
+material = SubResource("CanvasItemMaterial_43goe")
+emitting = false
+texture = ExtResource("2_hhm3x")
+lifetime = 0.1
+speed_scale = 3.0
+spread = 0.0
+gravity = Vector2(0, 0)
+color = Color(1, 1, 1, 0.705882)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=337752864]
+material = SubResource("CanvasItemMaterial_ag1be")
+texture = ExtResource("3_o5o6p")
+
+[node name="Glow" type="Sprite2D" parent="Sprite2D" unique_id=1702099654]
+visible = false
+modulate = Color(0.501961, 1, 1, 0.25098)
+material = SubResource("CanvasItemMaterial_8cyox")
+scale = Vector2(0.667, 0.667)
+texture = SubResource("GradientTexture2D_56h7e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1929902378]
+position = Vector2(-3, -1)
+shape = SubResource("CircleShape2D_jgav0")
+
+[node name="Timer" type="Timer" parent="." unique_id=1680600622]
+one_shot = true
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=382144278]
+libraries/ = SubResource("AnimationLibrary_nq1cb")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2021362116]
+position = Vector2(-35, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1005236592]
+position = Vector2(32, 15)
+shape = SubResource("CircleShape2D_thhy6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

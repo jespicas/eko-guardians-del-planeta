@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://cxp6bl16ps3o1"]
+
+[ext_resource type="Script" uid="uid://cixxi8ytqfsgp" path="res://enemics/BigBosses/enemyPolucio/bullet_polucio.gd" id="1_t25kr"]
+[ext_resource type="Texture2D" uid="uid://coj0d33vyyqx1" path="res://player/bullet.webp" id="2_l20ai"]
+[ext_resource type="Texture2D" uid="uid://c8edekt0p2rwg" path="res://enemics/BigBosses/enemyPolucio/enemynuvol.png" id="3_4at78"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xl6b7"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ctbqo"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mccjm"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_o13ul"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gxunr"]
+gradient = SubResource("Gradient_o13ul")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0.01)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yh0kx"]
+radius = 12.649111
+
+[sub_resource type="Animation" id="Animation_v7668"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="5"]
+resource_name = "destroy"
+length = 0.3
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CPUParticles2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vob0t"]
+_data = {
+&"RESET": SubResource("Animation_v7668"),
+&"destroy": SubResource("5")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t25kr"]
+radius = 15.297058
+
+[node name="BulletPolucio" type="RigidBody2D" unique_id=1478133396]
+collision_layer = 26
+script = ExtResource("1_t25kr")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=950350461]
+self_modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_xl6b7")
+emitting = false
+texture = ExtResource("2_l20ai")
+lifetime = 0.1
+speed_scale = 3.0
+spread = 0.0
+gravity = Vector2(0, 0)
+color = Color(1, 1, 1, 0.705882)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1891734831]
+material = SubResource("CanvasItemMaterial_ctbqo")
+position = Vector2(-1.5000019, -3.7500005)
+scale = Vector2(0.6369863, 0.5664062)
+texture = ExtResource("3_4at78")
+hframes = 7
+vframes = 2
+
+[node name="Glow" type="Sprite2D" parent="Sprite2D" unique_id=806847309]
+visible = false
+modulate = Color(0.501961, 1, 1, 0.25098)
+material = SubResource("CanvasItemMaterial_mccjm")
+scale = Vector2(0.667, 0.667)
+texture = SubResource("GradientTexture2D_gxunr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=488278650]
+shape = SubResource("CircleShape2D_yh0kx")
+
+[node name="Timer" type="Timer" parent="." unique_id=11067666]
+one_shot = true
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1600981400]
+libraries/ = SubResource("AnimationLibrary_vob0t")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1864767572]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1412085343]
+shape = SubResource("CircleShape2D_t25kr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="enemyDead" from="." to="." method="_on_enemy_dead"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

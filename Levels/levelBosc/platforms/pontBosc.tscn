@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bp73u8w5pl6xu"]
+
+[ext_resource type="Texture2D" uid="uid://cocxtwwyae3qp" path="res://Levels/levelBosc/TilesBigBoss/Tiles.png" id="1_qteu0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odg1e"]
+size = Vector2(80, 11)
+
+[node name="PontBosc" type="AnimatableBody2D" unique_id=1205980646]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1882260515]
+texture = ExtResource("1_qteu0")
+region_enabled = true
+region_rect = Rect2(79.90673, 113.78012, 80.42585, 45.515396)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=984696255]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_odg1e")

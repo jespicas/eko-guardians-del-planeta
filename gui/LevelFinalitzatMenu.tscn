@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cve0e6g0pu38g"]
+
+[ext_resource type="Theme" uid="uid://da4noqsij73it" path="res://gui/theme.tres" id="1_52ic4"]
+
+[node name="LevelFinalitzat" type="Panel" unique_id=2079693460]
+offset_right = 237.0
+offset_bottom = 91.0
+theme = ExtResource("1_52ic4")
+
+[node name="Label" type="Label" parent="." unique_id=1556179391]
+layout_mode = 0
+offset_left = 59.0
+offset_top = -11.0
+offset_right = 193.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 12
+text = "Fase finalitzada"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1636842801]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 41.0
+offset_right = 121.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 12
+text = "Num monedes:"
+
+[node name="monedes" type="Label" parent="." unique_id=1469098966]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 42.0
+offset_right = 171.0
+offset_bottom = 62.0
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="Label5" type="Label" parent="." unique_id=798917037]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 66.0
+offset_right = 147.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 12
+text = "Temps a fer el nivell:"
+
+[node name="temps" type="Label" parent="." unique_id=1488865830]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 65.0
+offset_right = 169.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 12
+
+[node name="s" type="Label" parent="." unique_id=318705336]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 67.0
+offset_right = 218.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 12
+text = "s"
+
+[node name="nomNivell" type="Label" parent="." unique_id=60263956]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 20.0
+offset_right = 255.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 12
+text = "nom nivell"
+horizontal_alignment = 1
+vertical_alignment = 1

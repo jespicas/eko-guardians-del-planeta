@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bcycmypxwssqq"]
+
+[ext_resource type="Script" uid="uid://2078bnnk7lw0" path="res://game.gd" id="1_pvo5w"]
+[ext_resource type="PackedScene" uid="uid://bp3m2giv1iljq" path="res://Levels/levelDesert/BigBossDesert.tscn" id="2_pvo5w"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_7w8dr"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_n23oh"]
+[ext_resource type="PackedScene" uid="uid://cr788n3jtq7ii" path="res://gui/hud_game.tscn" id="5_21id5"]
+
+[node name="Game" type="Node" unique_id=1264659261]
+process_mode = 3
+script = ExtResource("1_pvo5w")
+
+[node name="BigBossDesert" parent="." unique_id=1654953953 instance=ExtResource("2_pvo5w")]
+
+[node name="Player" parent="BigBossDesert" unique_id=1667439827 instance=ExtResource("3_7w8dr")]
+position = Vector2(442.00003, 390)
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=1171644758]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" unique_id=1239487998 instance=ExtResource("4_n23oh")]
+
+[node name="InterfaceLayer2" type="CanvasLayer" parent="." unique_id=1539715313]
+layer = 100
+
+[node name="HudGame" parent="InterfaceLayer2" unique_id=1225320713 instance=ExtResource("5_21id5")]
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 2.0
+offset_bottom = -3.0
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="refresh_life" from="." to="InterfaceLayer2/HudGame" method="_on_refresh_life"]
+[connection signal="NivellAcabat" from="BigBossDesert" to="." method="_on_level_nivell_acabat"]
+[connection signal="coin_collected" from="BigBossDesert/Player" to="InterfaceLayer2/HudGame" method="_on_player_2_coin_collected"]
+[connection signal="refresh_life" from="BigBossDesert/Player" to="InterfaceLayer2/HudGame" method="_on_player_refresh_life"]

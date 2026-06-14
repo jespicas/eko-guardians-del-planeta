@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bakon8qqdvxmc"]
+
+[ext_resource type="Script" uid="uid://2078bnnk7lw0" path="res://game.gd" id="1_4sesr"]
+[ext_resource type="PackedScene" uid="uid://bm4ikser4wcpa" path="res://Levels/levelPolucio/levelPolucio.tscn" id="2_4sesr"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_koxgo"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_k7yhw"]
+[ext_resource type="PackedScene" uid="uid://cr788n3jtq7ii" path="res://gui/hud_game.tscn" id="5_rmy7r"]
+
+[node name="Game" type="Node" unique_id=1347837822]
+process_mode = 3
+script = ExtResource("1_4sesr")
+
+[node name="LevelPolucio" parent="." unique_id=717310188 instance=ExtResource("2_4sesr")]
+position = Vector2(1, 0)
+
+[node name="Player" parent="LevelPolucio" unique_id=708567053 instance=ExtResource("3_koxgo")]
+position = Vector2(76.00001, 527.00006)
+collision_mask = 31
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=910012024]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" unique_id=895928173 instance=ExtResource("4_k7yhw")]
+
+[node name="InterfaceLayer2" type="CanvasLayer" parent="." unique_id=739006460]
+layer = 100
+
+[node name="HudGame" parent="InterfaceLayer2" unique_id=1225320713 instance=ExtResource("5_rmy7r")]
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="refresh_life" from="." to="InterfaceLayer2/HudGame" method="_on_refresh_life"]
+[connection signal="coin_collected" from="LevelPolucio/Player" to="InterfaceLayer2/HudGame" method="_on_player_3_coin_collected"]
+[connection signal="playerDead" from="LevelPolucio/Player" to="InterfaceLayer2/HudGame" method="_on_player_dead"]
+[connection signal="refresh_life" from="LevelPolucio/Player" to="InterfaceLayer2/HudGame" method="_on_player_refresh_life"]
+[connection signal="playerDead" from="InterfaceLayer2/HudGame" to="InterfaceLayer2/HudGame" method="_on_player_dead"]

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://coco8qxpmj366"]
+
+[ext_resource type="Script" uid="uid://8hwqx48c78ux" path="res://gui/Info/gelInfo/menu_gel_info.gd" id="1_suwkh"]
+[ext_resource type="Texture2D" uid="uid://bb2num1hw3cqx" path="res://gui/menunivellsgranAllGreyed.png" id="2_ctnfl"]
+[ext_resource type="Texture2D" uid="uid://digsw6hvilxur" path="res://gui/Info/gelInfo/cupito.png" id="3_yi1p8"]
+[ext_resource type="Texture2D" uid="uid://danb3kqlf6uu" path="res://gui/Info/gelInfo/fuguin.png" id="4_tedhn"]
+[ext_resource type="Theme" uid="uid://da4noqsij73it" path="res://gui/theme.tres" id="5_drpl1"]
+
+[node name="MenuGelInfo" type="Control" unique_id=634457073]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_suwkh")
+
+[node name="background" type="Sprite2D" parent="." unique_id=739692880]
+position = Vector2(401.00003, 239.99998)
+scale = Vector2(0.625, 0.88)
+texture = ExtResource("2_ctnfl")
+
+[node name="EnemicCupito" type="Sprite2D" parent="." unique_id=1086056897]
+position = Vector2(588.75, 228.76111)
+scale = Vector2(0.5672001, 0.4085764)
+texture = ExtResource("3_yi1p8")
+
+[node name="EnemicFuguin" type="Sprite2D" parent="." unique_id=783343515]
+position = Vector2(188.45001, 226.99998)
+scale = Vector2(0.51664054, 0.41332027)
+texture = ExtResource("4_tedhn")
+
+[node name="Panel" type="Panel" parent="." unique_id=726371451]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 442.0
+offset_right = 478.0
+offset_bottom = 468.0
+theme = ExtResource("5_drpl1")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1573791054]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 167.0
+offset_bottom = 26.0
+text = "Prem qualsevol tecla"
+
+[node name="Timer" type="Timer" parent="." unique_id=1107180783]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

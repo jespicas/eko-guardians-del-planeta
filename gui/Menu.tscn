@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://cboxys27e6wed"]
+
+[ext_resource type="Script" uid="uid://bbr5avql2sxkx" path="res://gui/menu.gd" id="1_qhd0x"]
+[ext_resource type="Texture2D" uid="uid://b0jtai15thw3u" path="res://gui/menunivellsgran.jpg" id="2_w1gfe"]
+[ext_resource type="Texture2D" uid="uid://d1konceh3amuo" path="res://gui/ekomenu.png" id="3_8ai5p"]
+[ext_resource type="Texture2D" uid="uid://5ep8gi4mcvxd" path="res://gui/llenyataireLevelDone.png" id="4_7ax7x"]
+[ext_resource type="Texture2D" uid="uid://br8eisr6qksfj" path="res://gui/serplevelDone.png" id="5_th7s4"]
+[ext_resource type="Texture2D" uid="uid://bmuvatq6fg8p8" path="res://gui/focLevelDone.png" id="6_5osxx"]
+[ext_resource type="Texture2D" uid="uid://76v22jvrfcqc" path="res://gui/plasticLevelDone.png" id="7_38x50"]
+[ext_resource type="Texture2D" uid="uid://cy55k40k25xug" path="res://gui/climaLevelDone.png" id="8_univf"]
+[ext_resource type="Texture2D" uid="uid://cpl7aeqqlqiwd" path="res://gui/polucioLevelDone.png" id="9_v85x1"]
+[ext_resource type="PackedScene" uid="uid://cve0e6g0pu38g" path="res://gui/LevelFinalitzatMenu.tscn" id="10_w1gfe"]
+[ext_resource type="Texture2D" uid="uid://5nw26tgafuv" path="res://gui/serpSelected.png" id="11_o0dl2"]
+[ext_resource type="Texture2D" uid="uid://caoblbcs7wirv" path="res://gui/serpInfoSelected.png" id="12_bx2ub"]
+[ext_resource type="Texture2D" uid="uid://btwkkq4nejs4r" path="res://gui/fabricaSelected.png" id="13_lxw26"]
+[ext_resource type="Texture2D" uid="uid://we3yp4565iku" path="res://gui/climaselected.png" id="14_wly6m"]
+[ext_resource type="Texture2D" uid="uid://e481ce5ub5m0" path="res://gui/plasticSelected.png" id="15_t0wh4"]
+[ext_resource type="Texture2D" uid="uid://11umwxq8rruy" path="res://gui/polucioSelected.png" id="16_w6068"]
+[ext_resource type="Texture2D" uid="uid://cb11soxbk61tk" path="res://gui/llenyataireSelected.png" id="17_nyomc"]
+
+[node name="Menu" type="Control" unique_id=1818668288]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qhd0x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=804042213]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.294118)
+
+[node name="mapa" type="Sprite2D" parent="." unique_id=426857434]
+z_index = -2
+position = Vector2(402, 239)
+scale = Vector2(0.625, 0.8802947)
+texture = ExtResource("2_w1gfe")
+
+[node name="EkoMenu" type="Sprite2D" parent="." unique_id=914649824]
+z_index = 1
+position = Vector2(426.00003, 92)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_8ai5p")
+
+[node name="levelLlenyataireDone" type="Sprite2D" parent="." unique_id=1400067730]
+visible = false
+z_index = -1
+position = Vector2(334, 295)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_7ax7x")
+
+[node name="serpLevelDone" type="Sprite2D" parent="." unique_id=1445117222]
+visible = false
+z_index = -1
+position = Vector2(498.00003, 388)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_th7s4")
+
+[node name="focLevelDone" type="Sprite2D" parent="." unique_id=16850983]
+visible = false
+z_index = -1
+position = Vector2(491, 215.00002)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_5osxx")
+
+[node name="plasticLevelDone" type="Sprite2D" parent="." unique_id=442900046]
+visible = false
+z_index = -1
+position = Vector2(342, 73)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_38x50")
+
+[node name="climaLevelDone" type="Sprite2D" parent="." unique_id=1688994675]
+visible = false
+z_index = -1
+position = Vector2(468.00003, 54.000004)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_univf")
+
+[node name="polucioLevelDone" type="Sprite2D" parent="." unique_id=1710837732]
+visible = false
+z_index = -1
+position = Vector2(332, 183)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_v85x1")
+
+[node name="LevelFinalitzatDesert" parent="." unique_id=2079693460 instance=ExtResource("10_w1gfe")]
+visible = false
+layout_mode = 0
+offset_left = 566.0
+offset_top = 348.0
+offset_right = 766.0
+offset_bottom = 440.0
+
+[node name="LevelFinalitzatBosc" parent="." unique_id=730252053 instance=ExtResource("10_w1gfe")]
+visible = false
+layout_mode = 0
+offset_left = 44.0
+offset_top = 235.0
+offset_right = 244.0
+offset_bottom = 327.0
+
+[node name="LevelFinalitzatPolucio" parent="." unique_id=820508703 instance=ExtResource("10_w1gfe")]
+visible = false
+layout_mode = 0
+offset_left = 45.0
+offset_top = 134.0
+offset_right = 245.0
+offset_bottom = 226.0
+
+[node name="LevelFinalitzatPlastic" parent="." unique_id=1925449408 instance=ExtResource("10_w1gfe")]
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 35.0
+offset_right = 246.0
+offset_bottom = 127.0
+
+[node name="LevelFinalitzatFoc" parent="." unique_id=1985031291 instance=ExtResource("10_w1gfe")]
+visible = false
+layout_mode = 0
+offset_left = 570.0
+offset_top = 175.0
+offset_right = 770.0
+offset_bottom = 267.0
+
+[node name="LevelFinalitzatClima" parent="." unique_id=1655373172 instance=ExtResource("10_w1gfe")]
+visible = false
+layout_mode = 0
+offset_left = 571.0
+offset_top = 38.0
+offset_right = 771.0
+offset_bottom = 130.0
+
+[node name="serpSelected" type="Sprite2D" parent="." unique_id=1418051383]
+visible = false
+position = Vector2(489.5, 389.5)
+scale = Vector2(0.59302354, 0.86764735)
+texture = ExtResource("11_o0dl2")
+
+[node name="serpInfoSelected" type="Sprite2D" parent="." unique_id=1961836714]
+visible = false
+position = Vector2(465.25, 376.5)
+scale = Vector2(0.58, 0.7916664)
+texture = ExtResource("12_bx2ub")
+
+[node name="FabricasInfoSelected" type="Sprite2D" parent="." unique_id=493738929]
+visible = false
+position = Vector2(493.00003, 248)
+scale = Vector2(0.58, 0.7916664)
+texture = ExtResource("12_bx2ub")
+
+[node name="climaInfoSelected" type="Sprite2D" parent="." unique_id=711659081]
+visible = false
+position = Vector2(503, 100.25)
+scale = Vector2(0.5599991, 0.8541664)
+texture = ExtResource("12_bx2ub")
+
+[node name="plasticInfoSelected" type="Sprite2D" parent="." unique_id=398923060]
+visible = false
+position = Vector2(353.5, 106.625)
+scale = Vector2(0.59999883, 0.80208325)
+texture = ExtResource("12_bx2ub")
+
+[node name="polucioInfoSelected" type="Sprite2D" parent="." unique_id=733331411]
+visible = false
+position = Vector2(364, 207.8125)
+scale = Vector2(0.59999883, 0.90104073)
+texture = ExtResource("12_bx2ub")
+
+[node name="llenyetaireInfoSelected" type="Sprite2D" parent="." unique_id=994052722]
+visible = false
+position = Vector2(323.00003, 284)
+scale = Vector2(0.59999883, 0.90104073)
+texture = ExtResource("12_bx2ub")
+
+[node name="fabricaSelected" type="Sprite2D" parent="." unique_id=1073109748]
+visible = false
+position = Vector2(493, 217)
+scale = Vector2(0.65263164, 0.82758623)
+texture = ExtResource("13_lxw26")
+
+[node name="climaSelected" type="Sprite2D" parent="." unique_id=1896173397]
+visible = false
+position = Vector2(463, 48.25)
+scale = Vector2(0.6271184, 0.9022988)
+texture = ExtResource("14_wly6m")
+
+[node name="plasticSelected" type="Sprite2D" parent="." unique_id=1628716280]
+visible = false
+position = Vector2(331.5, 73.125)
+scale = Vector2(0.6186441, 0.87068963)
+texture = ExtResource("15_t0wh4")
+
+[node name="contaminacioSelected" type="Sprite2D" parent="." unique_id=1283971125]
+visible = false
+position = Vector2(322, 193)
+scale = Vector2(0.63529396, 0.85106385)
+texture = ExtResource("16_w6068")
+
+[node name="llenyataireSelected" type="Sprite2D" parent="." unique_id=1518869195]
+visible = false
+position = Vector2(348.5, 294.5)
+scale = Vector2(0.6842105, 0.7857145)
+texture = ExtResource("17_nyomc")

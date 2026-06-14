@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dsl261471brsy"]
+
+[ext_resource type="Theme" uid="uid://da4noqsij73it" path="res://gui/theme.tres" id="1_rhv0k"]
+[ext_resource type="Script" uid="uid://btkewqhwe8tyh" path="res://gui/retry.gd" id="2_rhv0k"]
+
+[node name="Retry" type="Panel" unique_id=2079693460]
+offset_right = 210.0
+offset_bottom = 79.0
+theme = ExtResource("1_rhv0k")
+script = ExtResource("2_rhv0k")
+
+[node name="Label" type="Label" parent="." unique_id=1556179391]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 205.0
+offset_bottom = 23.0
+text = "Vols tornar a intentar?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1982758075]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 21.0
+offset_right = 199.0
+offset_bottom = 41.0
+
+[node name="Timer" type="Timer" parent="." unique_id=2142298802]
+wait_time = 1.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

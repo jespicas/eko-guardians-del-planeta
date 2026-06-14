@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c062pujmb3j81"]
+
+[ext_resource type="Script" uid="uid://2078bnnk7lw0" path="res://game.gd" id="1_k3717"]
+[ext_resource type="PackedScene" uid="uid://dhm4p1x2jgx0b" path="res://Levels/levelPolucio/LevelBossPolucio.tscn" id="2_xs1q6"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_akd41"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_7mfrm"]
+[ext_resource type="PackedScene" uid="uid://cr788n3jtq7ii" path="res://gui/hud_game.tscn" id="5_s1fad"]
+
+[node name="GameSinglePlayerPolucioBigBoss" type="Node" unique_id=1605715713]
+script = ExtResource("1_k3717")
+
+[node name="LevelBossPolucio" parent="." unique_id=1375898591 instance=ExtResource("2_xs1q6")]
+position = Vector2(-78, 4)
+
+[node name="Player" parent="LevelBossPolucio" unique_id=176979495 instance=ExtResource("3_akd41")]
+position = Vector2(790.99994, 527.00006)
+collision_mask = 31
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=1678313240]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" unique_id=1550845476 instance=ExtResource("4_7mfrm")]
+metadata/_edit_use_anchors_ = true
+
+[node name="InterfaceLayer2" type="CanvasLayer" parent="." unique_id=1711867838]
+layer = 100
+
+[node name="HudGame" parent="InterfaceLayer2" unique_id=1225320713 instance=ExtResource("5_s1fad")]
+metadata/_edit_use_anchors_ = true
+
+[connection signal="refresh_life" from="." to="InterfaceLayer2/HudGame" method="_on_refresh_life"]
+[connection signal="NivellAcabat" from="LevelBossPolucio" to="." method="_on_level_nivell_acabat"]
+[connection signal="coin_collected" from="LevelBossPolucio/Player" to="InterfaceLayer2/HudGame" method="_on_player_3_coin_collected"]
+[connection signal="playerDead" from="LevelBossPolucio/Player" to="InterfaceLayer2/HudGame" method="_on_player_dead"]
+[connection signal="refresh_life" from="LevelBossPolucio/Player" to="InterfaceLayer2/HudGame" method="_on_player_refresh_life"]
+[connection signal="playerDead" from="InterfaceLayer2/HudGame" to="InterfaceLayer2/HudGame" method="_on_player_dead"]

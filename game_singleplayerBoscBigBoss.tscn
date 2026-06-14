@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://df7vlep8rlgbl"]
+
+[ext_resource type="Script" uid="uid://2078bnnk7lw0" path="res://game.gd" id="1_i3382"]
+[ext_resource type="PackedScene" uid="uid://b3df5ayie70dr" path="res://Levels/levelBosc/bigbossBosc.tscn" id="2_jen70"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_jen70"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_xtj8c"]
+[ext_resource type="PackedScene" uid="uid://cr788n3jtq7ii" path="res://gui/hud_game.tscn" id="5_b7nuu"]
+
+[node name="Game" type="Node" unique_id=1347837822]
+process_mode = 3
+script = ExtResource("1_i3382")
+
+[node name="BigbossBosc" parent="." unique_id=349701201 instance=ExtResource("2_jen70")]
+
+[node name="Player" parent="BigbossBosc" unique_id=708567053 instance=ExtResource("3_jen70")]
+position = Vector2(467.99997, 580)
+collision_mask = 31
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=910012024]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" unique_id=895928173 instance=ExtResource("4_xtj8c")]
+
+[node name="InterfaceLayer2" type="CanvasLayer" parent="." unique_id=739006460]
+layer = 100
+
+[node name="HudGame" parent="InterfaceLayer2" unique_id=1225320713 instance=ExtResource("5_b7nuu")]
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="refresh_life" from="." to="InterfaceLayer2/HudGame" method="_on_refresh_life"]
+[connection signal="coin_collected" from="BigbossBosc/Player" to="InterfaceLayer2/HudGame" method="_on_player_2_coin_collected"]
+[connection signal="playerDead" from="BigbossBosc/Player" to="InterfaceLayer2/HudGame" method="_on_player_dead"]
+[connection signal="refresh_life" from="BigbossBosc/Player" to="InterfaceLayer2/HudGame" method="_on_player_refresh_life"]

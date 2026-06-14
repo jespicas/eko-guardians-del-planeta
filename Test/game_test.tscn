@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d3edxe7aebc52"]
+
+[ext_resource type="Script" uid="uid://cge2rta4egnhq" path="res://Test/test.gd" id="1_4wo8p"]
+[ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_4xkwb"]
+[ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_1ibag"]
+[ext_resource type="PackedScene" uid="uid://c8bcukft8y5u0" path="res://Test/levelTest.tscn" id="4_3gmh5"]
+[ext_resource type="PackedScene" uid="uid://cr788n3jtq7ii" path="res://gui/hud_game.tscn" id="5_u7vyo"]
+
+[node name="Test" type="Node" unique_id=1347837822]
+process_mode = 3
+script = ExtResource("1_4wo8p")
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=910012024]
+layer = 100
+
+[node name="PauseMenu" parent="InterfaceLayer" unique_id=895928173 instance=ExtResource("4_1ibag")]
+
+[node name="InterfaceLayer2" type="CanvasLayer" parent="." unique_id=739006460]
+layer = 100
+
+[node name="HudGame" parent="InterfaceLayer2" unique_id=1225320713 instance=ExtResource("5_u7vyo")]
+offset_left = 7.0
+offset_right = 7.0
+
+[node name="Level2" parent="." unique_id=717310188 instance=ExtResource("4_3gmh5")]
+position = Vector2(-1, 0)
+
+[node name="Player" parent="Level2" unique_id=708567053 instance=ExtResource("3_4xkwb")]
+position = Vector2(77.00001, 527.00006)
+collision_mask = 31
+
+[connection signal="playerDead" from="InterfaceLayer2/HudGame" to="InterfaceLayer2/HudGame" method="_on_player_dead"]
+[connection signal="coin_collected" from="Level2/Player" to="InterfaceLayer2/HudGame" method="_on_player_3_coin_collected"]
+[connection signal="playerDead" from="Level2/Player" to="InterfaceLayer2/HudGame" method="_on_player_dead"]
+[connection signal="refresh_life" from="Level2/Player" to="InterfaceLayer2/HudGame" method="_on_player_refresh_life"]

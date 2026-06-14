@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://c347n6d4yg86"]
+
+[ext_resource type="Theme" uid="uid://da4noqsij73it" path="res://gui/theme.tres" id="1_u1ci8"]
+[ext_resource type="Texture2D" uid="uid://dsrfcwvhjed4e" path="res://gui/vides.png" id="2_ulkvv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lnol"]
+atlas = ExtResource("2_ulkvv")
+region = Rect2(0, 0, 20, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i548"]
+atlas = ExtResource("2_ulkvv")
+region = Rect2(20, 0, 20, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5j7vu"]
+atlas = ExtResource("2_ulkvv")
+region = Rect2(40, 0, 20, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owo0j"]
+atlas = ExtResource("2_ulkvv")
+region = Rect2(60, 0, 20, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sltit"]
+atlas = ExtResource("2_ulkvv")
+region = Rect2(80, 0, 20, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvplm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lnol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8i548")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5j7vu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owo0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sltit")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Vides" type="Panel" unique_id=2079693460]
+offset_right = 152.0
+offset_bottom = 40.0
+theme = ExtResource("1_u1ci8")
+
+[node name="Label" type="Label" parent="." unique_id=1556179391]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 48.0
+offset_bottom = 41.0
+text = "Vides"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="vida1" type="AnimatedSprite2D" parent="." unique_id=1148196395]
+position = Vector2(59, 21)
+sprite_frames = SubResource("SpriteFrames_mvplm")
+autoplay = "default"
+
+[node name="vida2" type="AnimatedSprite2D" parent="." unique_id=1544890110]
+position = Vector2(79, 21)
+sprite_frames = SubResource("SpriteFrames_mvplm")
+autoplay = "default"
+
+[node name="vida3" type="AnimatedSprite2D" parent="." unique_id=327495028]
+position = Vector2(100, 21)
+sprite_frames = SubResource("SpriteFrames_mvplm")
+autoplay = "default"
+
+[node name="vida4" type="AnimatedSprite2D" parent="." unique_id=1536004697]
+position = Vector2(120, 21)
+sprite_frames = SubResource("SpriteFrames_mvplm")
+autoplay = "default"
+
+[node name="vida5" type="AnimatedSprite2D" parent="." unique_id=1495882146]
+position = Vector2(140, 21)
+sprite_frames = SubResource("SpriteFrames_mvplm")
+autoplay = "default"
