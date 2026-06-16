@@ -13,7 +13,6 @@ func destroy() -> void:
 
 
 func _on_body_entered(body: Node) -> void:
-	print(body)
 	if body is Player:
 		(body as Player)._loseLife()
 		queue_free()

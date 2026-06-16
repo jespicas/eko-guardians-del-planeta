@@ -4,12 +4,15 @@ var startLevelTime
 var endLevelTime
 signal EnemyDead
 
+var initialPositionEnemy
+
 var startLevel
 signal NivellAcabat
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GlobalValues.IniciaLevel()
 	startLevelTime = Time.get_ticks_msec()
+	initialPositionEnemy = $Enemies/EnemyPlastic.global_position
 	pass # Replace with function body.
 
 
@@ -31,4 +34,12 @@ func _on_enemy_dead() -> void:
 		GlobalValues.EndLevelInfo("Plastic",GlobalValues.monedesCapturadesCurrentLevel, GlobalValues.TimeElapsedFinishLevel)
 		NivellAcabat.emit()
 		#get_tree().change_scene_to_file("res://game_singleplayerDesertBigBoss.tscn")	
+	pass # Replace with function body.
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("levelplasticboss entered:"+body.get_name())
+	if body.get_name() == "EnemyPlastic":
+		print(initialPositionEnemy)
+		$Enemies/EnemyPlastic.position = initialPositionEnemy
 	pass # Replace with function body.

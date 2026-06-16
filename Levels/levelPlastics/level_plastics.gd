@@ -32,7 +32,7 @@ func _on_enemy_dead() -> void:
 		print((endLevelTime - startLevelTime)/1000)
 		GlobalValues.EndLevelInfo("Plastic",GlobalValues.monedesCapturadesCurrentLevel, GlobalValues.TimeElapsedFinishLevel)		
 		#NivellAcabat.emit()
-		get_tree().change_scene_to_file("res://Levels/levelPlastics/levelPlasticsBos.tscn")	
+		get_tree().change_scene_to_file("res://game_singleplayerPlasticsBoss.tscn" ) 	
 	pass # Replace with function body.
 
 

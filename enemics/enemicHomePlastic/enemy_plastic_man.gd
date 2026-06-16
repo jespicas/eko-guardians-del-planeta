@@ -55,8 +55,8 @@ func _physics_process(delta: float) -> void:
 		if (position.y > 650):
 			#position.y  = position.y-5
 			velocity.y = direccion_vertical * SWIM_SPEED
-		print(position.y)
-		print("floor left")		
+#		print(position.y)
+#		print("floor left")		
 	if top_detector_left.is_colliding():
 		if (position.y < 0):
 			velocity.y = 1 * SWIM_SPEED

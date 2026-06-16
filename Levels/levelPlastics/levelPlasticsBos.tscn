@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mo63nkh36gh5" path="res://Levels/levelPlastics/level_plastics_bos.gd" id="1_s2ced"]
 [ext_resource type="Shader" uid="uid://niiml8hetykw" path="res://Levels/levelPlastics/levelPlastics.gdshader" id="2_871nf"]
-[ext_resource type="Material" uid="uid://dxo7yh748damv" path="res://Levels/levelPolucio/props/wind_sway.tres" id="3_i3ns3"]
+[ext_resource type="Material" uid="uid://djwm5nol3d801" path="res://Levels/levelDesert/props/wind_sway.tres" id="3_i3ns3"]
 [ext_resource type="Texture2D" uid="uid://dt3asf2jrjj8j" path="res://Levels/levelPlastics/Gemini_Generated_Image_psv2kqpsv2kqpsv2-removebg-preview.png" id="4_s03a8"]
 [ext_resource type="Texture2D" uid="uid://bx0mcaphb46mp" path="res://Levels/levelPolucio/Tilesets-removebg-preview.png" id="5_pq2dp"]
 [ext_resource type="PackedScene" uid="uid://c3dh7xb6ef76q" path="res://shared/coin.tscn" id="6_a3k3h"]
@@ -1747,7 +1747,7 @@ sources/3 = SubResource("TileSetAtlasSource_dwi5r")
 sources/0 = SubResource("TileSetAtlasSource_ei6e0")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gbu2a"]
-size = Vector2(2890, 337)
+size = Vector2(2890, 195.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xyqb2"]
 size = Vector2(344, 135)
@@ -2001,9 +2001,11 @@ position = Vector2(797, 769)
 position = Vector2(865, 768)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1021420512]
+disable_mode = 2
+collision_layer = 255
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1369769524]
-position = Vector2(595, 997)
+[node name="sotaterra" type="CollisionShape2D" parent="Area2D" unique_id=1369769524]
+position = Vector2(643, 793.75)
 shape = SubResource("RectangleShape2D_gbu2a")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1286206210]
@@ -2020,3 +2022,4 @@ autoplay = true
 parameters/looping = false
 
 [connection signal="enemyDead" from="Enemies/EnemyPlastic" to="." method="_on_enemy_dead"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

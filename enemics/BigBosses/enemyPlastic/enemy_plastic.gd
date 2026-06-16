@@ -58,7 +58,7 @@ func _physics_process(delta: float) -> void:
 		if (position.y > 650):
 			#position.y  = position.y-5
 			velocity.y = direccion_vertical * SWIM_SPEED
-		print("floor left")		
+#		print("floor left")		
 	if top_detector_left.is_colliding():
 		if (position.y < 0):
 			velocity.y = 1 * SWIM_SPEED
@@ -132,6 +132,7 @@ func get_new_animation() -> StringName:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("enemybodyentered:"+body.get_name())
 	if body.get_name() == "Player" and _state != State.DEAD:
 		body._loseLife()
 
@@ -148,7 +149,7 @@ func _on_tocat_dead_timeout() -> void:
 
 
 func _on_disparar_timeout() -> void:
-	print("dispara")
+	#print("dispara")
 	#chorrolaser.add_point(global_position)
 	#chorrolaser.add_point(global_position*100)
 	#activar_chorro(global_position)
@@ -162,7 +163,7 @@ func _on_disparar_timeout() -> void:
 
 
 func _on_cooldown_timeout() -> void:
-	print("finish disparar")
+	#print("finish disparar")
 	is_shooting = false
 
 
