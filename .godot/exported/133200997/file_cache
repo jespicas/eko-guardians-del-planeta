@@ -16,7 +16,7 @@ res://gui/kenney_mini_square.tres::d15e7490bc9b4a32d6477d1812d5c0fe::1711378810:
 res://gui/LevelFinalitzat.tscn::bad127cc27e61111121f4a5a5f8bef11::1781383798::res://.godot/exported/133200997/export-f0cc00839a60e4a4f595a462bf39f37e-LevelFinalitzat.scn
 res://gui/LevelFinalitzatMenu.tscn::990f372bbf736f847a3589c7cf289a22::1774302145::res://.godot/exported/133200997/export-e0b60f380e2d663d29922a8480934f88-LevelFinalitzatMenu.scn
 res://gui/lifes.tscn::98f8f603a5e75f3b23c33c8e79be7b24::1774135740::res://.godot/exported/133200997/export-62a7412aba65bcbb6bccbe724004c89e-lifes.scn
-res://gui/Menu.tscn::0533c3ec96502ed16241ab5b850585c4::1781469630::res://.godot/exported/133200997/export-edd24bc1271ae420d1ec883979c7a602-Menu.scn
+res://gui/Menu.tscn::dcbece8276f11ed80251a04139ec9ca1::1781948193::res://.godot/exported/133200997/export-edd24bc1271ae420d1ec883979c7a602-Menu.scn
 res://gui/pause_menu.tscn::2646e069b6ef10c5a49deec4d6d8304d::1774121856::res://.godot/exported/133200997/export-0144fd5b68da2b1b9f347d3acff86799-pause_menu.scn
 res://gui/pause_menu_singleplayer.tscn::bba4715f5e84235159b425467bfc4414::1781383757::res://.godot/exported/133200997/export-1b7c95026d7d05a7ed4ffdf28d953604-pause_menu_singleplayer.scn
 res://gui/pause_menu_splitscreen.tscn::9a90826d980dca1ad1c86c2ed43962b2::1707179290::res://.godot/exported/133200997/export-3310d8bfc90af9ce066e307a685a4edf-pause_menu_splitscreen.scn
@@ -97,3 +97,4 @@ res://game_singleplayerGelBigBoss.tscn::f516e3c884d09219980a2b460357b73a::178138
 res://game_singleplayerGelFirst.tscn::484398bf3ae57d42708e99e642ff6e5f::1781383563::res://.godot/exported/133200997/export-4f5491d88e6be1b697be313e44cd8ed5-game_singleplayerGelFirst.scn
 res://game_singleplayerPlasticsBoss.tscn::f810b79472cff5888de07dcbf070455a::1781471231::res://.godot/exported/133200997/export-08da49c7a66683b2c503af83ede16da0-game_singleplayerPlasticsBoss.scn
 res://game_singlePlayerPolucioBigBoss.tscn::39950a765d8ffc9fd9830641a6e0536f::1781383563::res://.godot/exported/133200997/export-97640b4cf6dfeee8a50c4e97f2e94ce6-game_singlePlayerPolucioBigBoss.scn
+res://gui/TriaNivell.tscn::4e330b62947d2faab0b42b933b3353c8::1781948136::res://.godot/exported/133200997/export-a947f11c23edf8ec1f61268aa9f5c062-TriaNivell.scn

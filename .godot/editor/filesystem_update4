@@ -3,3 +3,5 @@ res://Levels/levelPlastics/levelPlastics.gdshader
 res://Levels/levelDesert/props/wind_sway.tres
 res://gui/theme.tres
 res://Levels/levelDesert/tileset.tres
+res://gui/Menu.tscn
+res://gui/TriaNivell.tscn

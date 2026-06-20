@@ -1,11 +1,11 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1781946628
+::res://::1781947419
 default_bus_layout.tres::AudioBusLayout::6419567431398995635::1773350319::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1781386137::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1781947125::0::1::::<><><>0<>0<><>::
 game.gd::GDScript::1948710170256859825::1781382719::0::1::::Game<>Node<><>0<>0<><>::
 game_singleplayerBosc.tscn::PackedScene::1148538594961858455::1781383388::0::1::::<><><>0<>0<><>::uid://2078bnnk7lw0::::res://game.gd<>uid://6ykv1uarubsi::::res://Levels/levelBosc/level.tscn<>uid://vh7pmputa7r3::::res://player/player.tscn<>uid://c7ai4bigaryci::::res://gui/pause_menu_singleplayer.tscn<>uid://cr788n3jtq7ii::::res://gui/hud_game.tscn
 game_singleplayerBoscBigBoss.tscn::PackedScene::7577561292768420365::1781383428::0::1::::<><><>0<>0<><>::uid://2078bnnk7lw0::::res://game.gd<>uid://b3df5ayie70dr::::res://Levels/levelBosc/bigbossBosc.tscn<>uid://vh7pmputa7r3::::res://player/player.tscn<>uid://c7ai4bigaryci::::res://gui/pause_menu_singleplayer.tscn<>uid://cr788n3jtq7ii::::res://gui/hud_game.tscn
-game_singleplayerDesert.tscn::PackedScene::2796527636363398270::1781455526::0::1::::<><><>0<>0<><>::uid://2078bnnk7lw0::::res://game.gd<>uid://ctgumjaytuoch::::res://Levels/levelDesert/level.tscn<>uid://vh7pmputa7r3::::res://player/player.tscn<>uid://c7ai4bigaryci::::res://gui/pause_menu_singleplayer.tscn<>uid://cr788n3jtq7ii::::res://gui/hud_game.tscn
+game_singleplayerDesert.tscn::PackedScene::2796527636363398270::1781947087::0::1::::<><><>0<>0<><>::uid://2078bnnk7lw0::::res://game.gd<>uid://ctgumjaytuoch::::res://Levels/levelDesert/level.tscn<>uid://vh7pmputa7r3::::res://player/player.tscn<>uid://c7ai4bigaryci::::res://gui/pause_menu_singleplayer.tscn<>uid://cr788n3jtq7ii::::res://gui/hud_game.tscn<>uid://c0ujphsx1pvpq::::res://addons/virtual_joystick_plus/virtual_joystick_plus.gd<>uid://fwwjgoutymlk::::res://addons/virtual_joystick_plus/resources/textures/joystick_texture_5.png<>uid://d03sghwtsw3w::::res://addons/virtual_joystick_plus/resources/textures/stick_texture_5.png
 game_singleplayerDesertBigBoss.tscn::PackedScene::2576487585386604808::1781455429::0::1::::<><><>0<>0<><>::uid://2078bnnk7lw0::::res://game.gd<>uid://bp3m2giv1iljq::::res://Levels/levelDesert/BigBossDesert.tscn<>uid://vh7pmputa7r3::::res://player/player.tscn<>uid://c7ai4bigaryci::::res://gui/pause_menu_singleplayer.tscn<>uid://cr788n3jtq7ii::::res://gui/hud_game.tscn
 game_singleplayerGelBigBoss.tscn::PackedScene::1432337756704040473::1781383563::0::1::::<><><>0<>0<><>::uid://2078bnnk7lw0::::res://game.gd<>uid://cas6r0p74gs1t::::res://Levels/levelGel/levelGelBoss.tscn<>uid://vh7pmputa7r3::::res://player/player.tscn<>uid://c7ai4bigaryci::::res://gui/pause_menu_singleplayer.tscn<>uid://cr788n3jtq7ii::::res://gui/hud_game.tscn
 game_singleplayerGelFirst.tscn::PackedScene::2904075042338276839::1781383563::0::1::::<><><>0<>0<><>::uid://2078bnnk7lw0::::res://game.gd<>uid://c7ai4bigaryci::::res://gui/pause_menu_singleplayer.tscn<>uid://d2xm88twn1i2b::::res://Levels/levelGel/levelgelprimer.tscn<>uid://vh7pmputa7r3::::res://player/player.tscn<>uid://cr788n3jtq7ii::::res://gui/hud_game.tscn
@@ -22,13 +22,13 @@ music.tscn::PackedScene::8208426152851302441::1779568276::0::1::::<><><>0<>0<><>
 Pulso del Planeta.ogg::AudioStreamOggVorbis::8212005225338920951::1779566567::1779566653::1::::<><><>0<>0<>2515462ee950af4426af37a6b27088a9<>res://.godot/imported/Pulso del Planeta.ogg-2351d2d8d43e47e2866e78c05e106617.oggvorbisstr::
 README.md::TextFile::-1::1781468100::0::1::::<><><>0<>0<><>::
 ::res://addons/::1769972588
-::res://addons/virtual_joystick_plus/::1769972588
+::res://addons/virtual_joystick_plus/::1781946629
 icon.svg::CompressedTexture2D::1855719661013614559::1769972588::1781946629::1::::<><><>0<>0<>3dc6cc77ed3a25e474eaafbc4faa71cb<>res://.godot/imported/icon.svg-33d5eb09015dffa91f282575b94d62b0.ctex::
 plugin.cfg::TextFile::-1::1769972588::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript::4756601386818111583::1769972588::0::1::::<>EditorPlugin<><>0<>1<><>::
-virtual_joystick_plus.gd::GDScript::6569423649811983194::1769972588::0::1::::VirtualJoystickPlus<>Control<>res://addons/virtual_joystick_plus/icon.svg<>0<>1<><>::
+virtual_joystick_plus.gd::GDScript::6569423649811983194::1769972588::0::1::::VirtualJoystickPlus<>Control<><>0<>1<><>::
 ::res://addons/virtual_joystick_plus/resources/::1769972588
-::res://addons/virtual_joystick_plus/resources/textures/::1769972588
+::res://addons/virtual_joystick_plus/resources/textures/::1781946629
 joystick_texture_1.png::CompressedTexture2D::4678402891007885266::1769972588::1781946629::1::::<><><>0<>0<>c2989bce81056fa9c77f37ed3bde627d<>res://.godot/imported/joystick_texture_1.png-ab469b81c29ce54ef254f0f90505fdd3.ctex::
 joystick_texture_2.png::CompressedTexture2D::5616885018545587825::1769972588::1781946629::1::::<><><>0<>0<>2623e7ba4fba12e35f7866290ee7e09a<>res://.godot/imported/joystick_texture_2.png-b0ac9ea76ea7c910106f2206aba7ad8f.ctex::
 joystick_texture_3.png::CompressedTexture2D::269087293517348204::1769972588::1781946629::1::::<><><>0<>0<>3a37d0823f7a9980533f3b9298745d0b<>res://.godot/imported/joystick_texture_3.png-0eb138a1c613153482696523423647e6.ctex::
@@ -41,14 +41,14 @@ stick_texture_3.png::CompressedTexture2D::6690198391420111874::1769972588::17819
 stick_texture_4.png::CompressedTexture2D::4281732417869096919::1769972588::1781946629::1::::<><><>0<>0<>664c787813e6b5925483e87665796d90<>res://.godot/imported/stick_texture_4.png-e6cb1ad1e7af81cc732d85ad71f1ab3b.ctex::
 stick_texture_5.png::CompressedTexture2D::263908521832776038::1769972588::1781946629::1::::<><><>0<>0<>aab4a39a8f5ed021cb08c3f09f52ac60<>res://.godot/imported/stick_texture_5.png-576700ad43dae51210a9e854e93d4c7a.ctex::
 stick_texture_6.png::CompressedTexture2D::6065754606608932649::1769972588::1781946629::1::::<><><>0<>0<>bb152407589104951f5e313cec2720fd<>res://.godot/imported/stick_texture_6.png-4c7dbe20bbf4bcdbe79c0de551d984ae.ctex::
-::res://docs/::1781629837
-index.144x144.png::CompressedTexture2D::5937519963633194390::1781470124::1781946629::1::::<><><>0<>0<>3a8ee00100914a05c533463a0ebe0a22<>res://.godot/imported/index.144x144.png-92b83f3768c7cca659fbe2ac02cd6924.ctex::
-index.180x180.png::CompressedTexture2D::3483572671473912529::1781470124::1781946629::1::::<><><>0<>0<>acc1ddde1ce23070064da925c39cbad7<>res://.godot/imported/index.180x180.png-df2c9c60e7d0ad994df71f75ff8fc6c4.ctex::
-index.512x512.png::CompressedTexture2D::8534726576448379015::1781470124::1781946629::1::::<><><>0<>0<>4a68fa875bf1b11a513ea7d593f8de0d<>res://.godot/imported/index.512x512.png-9c95060c3a6daf64e19402e931238c81.ctex::
-index.apple-touch-icon.png::CompressedTexture2D::8064687991515459344::1781470124::1781946629::1::::<><><>0<>0<>703de9046bd71a01fa1ca685ee365715<>res://.godot/imported/index.apple-touch-icon.png-b21a756d869f84af832970a74d8371bc.ctex::
-index.icon.png::CompressedTexture2D::7158621754263385275::1781470124::1781946629::1::::<><><>0<>0<>dc47f5ff46575215167b59a616c0cc20<>res://.godot/imported/index.icon.png-b92c9a802ad4b78e247784454a6b506f.ctex::
-index.manifest.json::JSON::-1::1781470124::0::1::::<><><>0<>0<><>::
-index.png::CompressedTexture2D::4889033316653865705::1781470124::1781946629::1::::<><><>0<>0<>538d7bd68bcc3cadfbb09c73e2c14139<>res://.godot/imported/index.png-0c78d14d192abe5f22f8c25928ca1ab8.ctex::
+::res://docs/::1781947153
+index.144x144.png::CompressedTexture2D::8785001802322185574::1781947125::1781947881::1::::<><><>0<>0<>3ffff79f1915f72362a3f5b178f0882f<>res://.godot/imported/index.144x144.png-92b83f3768c7cca659fbe2ac02cd6924.ctex::
+index.180x180.png::CompressedTexture2D::3897012737593881719::1781947125::1781947881::1::::<><><>0<>0<>65cb4735fb5f5a82cb79a20cb7b48598<>res://.godot/imported/index.180x180.png-df2c9c60e7d0ad994df71f75ff8fc6c4.ctex::
+index.512x512.png::CompressedTexture2D::6139094720811288516::1781947125::1781947881::1::::<><><>0<>0<>43afa0c0ce1f13e49c1c9bc5bb169acb<>res://.godot/imported/index.512x512.png-9c95060c3a6daf64e19402e931238c81.ctex::
+index.apple-touch-icon.png::CompressedTexture2D::8870589760295016300::1781947125::1781947881::1::::<><><>0<>0<>ff05f8b68475cae43afa65c6f21b9d8f<>res://.godot/imported/index.apple-touch-icon.png-b21a756d869f84af832970a74d8371bc.ctex::
+index.icon.png::CompressedTexture2D::4907572842655925488::1781947125::1781947881::1::::<><><>0<>0<>6119d45daf1fa72596b5ab1497c2b28f<>res://.godot/imported/index.icon.png-b92c9a802ad4b78e247784454a6b506f.ctex::
+index.manifest.json::JSON::-1::1781947125::0::1::::<><><>0<>0<><>::
+index.png::CompressedTexture2D::8296265003800676963::1781947125::1781947881::1::::<><><>0<>0<>176dca0585c6998252445a91b38fff6f<>res://.godot/imported/index.png-0c78d14d192abe5f22f8c25928ca1ab8.ctex::
 ::res://enemics/::1779616534
 ::res://enemics/BigBosses/::1781120494
 ::res://enemics/BigBosses/enemyGel/::1781208931
@@ -203,7 +203,7 @@ soundserp.mp3::AudioStreamMP3::4236065361884605254::1778426090::1778776757::1:::
 finalJoc.tscn::PackedScene::1753154021049408359::1781459013::0::1::::<><><>0<>0<><>::uid://d4aihu8cbhnkf::::res://final/output.ogv<>uid://b5ljj60evifnv::::res://final/final_joc.gd<>uid://da4noqsij73it::::res://gui/theme.tres
 final_joc.gd::GDScript::4515358340262862643::1781459013::0::1::::<>Node2D<><>0<>0<><>::
 output.ogv::VideoStreamTheora::9195237854619754581::1781302583::0::1::::<><><>0<>0<><>::
-::res://gui/::1781469999
+::res://gui/::1781946758
 climaLevelDone.png::CompressedTexture2D::6521145877331721770::1773958048::1778776759::1::::<><><>0<>0<>0e5dc1b495ff459ded809f9d0e694585<>res://.godot/imported/climaLevelDone.png-bb1b454e911d245e351156ced191909b.ctex::
 climaselected.png::CompressedTexture2D::1554155839959388136::1777828367::1778776759::1::::<><><>0<>0<>0945b8ef346f030e22d4506f57e92ce9<>res://.godot/imported/climaselected.png-c7fa70621be36121605b194f8df024cd.ctex::
 coins_counter.gd::GDScript::7937346408430408305::1774115584::0::1::::CoinsCounter<>Panel<><>0<>0<><>::
@@ -247,7 +247,7 @@ retry.tscn::PackedScene::8447065522169459624::1774134578::0::1::::<><><>0<>0<><>
 serpInfoSelected.png::CompressedTexture2D::4801823073143193191::1777825714::1778776759::1::::<><><>0<>0<>4f99109227ef7c436fa54eaf059a180f<>res://.godot/imported/serpInfoSelected.png-90f184c111bdb834cd0c0b67b21cf42d.ctex::
 serplevelDone.png::CompressedTexture2D::3648013618858200427::1773957896::1778776759::1::::<><><>0<>0<>173d941b809b7cc15790c8ad286c7309<>res://.godot/imported/serplevelDone.png-6ea90d6253f764b2b042715335af56b5.ctex::
 serpSelected.png::CompressedTexture2D::62761407884353361::1777825439::1778776759::1::::<><><>0<>0<>d02f75bf17319c99317a98d86b0b7c91<>res://.godot/imported/serpSelected.png-db9bb496e9912c6982057c85f35b7947.ctex::
-theme.tres::Theme::7219944196524551843::1781469999::0::1::::<><><>0<>0<><>::uid://wqrno8lackrm::::res://gui/kenney_mini_square.ttf
+theme.tres::Theme::7219944196524551843::1781946758::0::1::::<><><>0<>0<><>::uid://wqrno8lackrm::::res://gui/kenney_mini_square.ttf
 touch_button_fire.webp::CompressedTexture2D::1347362171361262843::1711378810::1778776759::1::::<><><>0<>0<>a70beb8efc5bddcfe032f7c218b739d1<>res://.godot/imported/touch_button_fire.webp-dccf84dcf0f617f42794a4bab6e5b347.ctex::
 touch_button_jump.webp::CompressedTexture2D::6985027075830143774::1711378810::1778776759::1::::<><><>0<>0<>3c41261271a4812fdaa92375f8a25887<>res://.godot/imported/touch_button_jump.webp-72d09f543801d684298fbadf893197c2.ctex::
 touch_button_left.webp::CompressedTexture2D::2330250603665238312::1711378810::1778776759::1::::<><><>0<>0<>d1a516be0fbf0c61dffa97e5d1eeb3a1<>res://.godot/imported/touch_button_left.webp-f44154539d59fd4f5b3597e8703bbc6a.ctex::
@@ -311,7 +311,7 @@ platform.tscn::PackedScene::4354690019035031989::1781458980::0::1::::<><><>0<>0<
 pontBosc.tscn::PackedScene::3507050986708887206::1780522416::0::1::::<><><>0<>0<><>::uid://cocxtwwyae3qp::::res://Levels/levelBosc/TilesBigBoss/Tiles.png
 ::res://Levels/levelBosc/TilesBigBoss/::1780519255
 Tiles.png::CompressedTexture2D::5761045545334637375::1667234174::1780519255::1::::<><><>0<>0<>9f424b06c241eddba30976b768f33e7d<>res://.godot/imported/Tiles.png-e5632eb8923582a70320ad943b881db7.ctex::
-::res://Levels/levelDesert/::1781455526
+::res://Levels/levelDesert/::1781946758
 BigBossDesert.tscn::PackedScene::3497833064213642606::1781455383::0::1::::<><><>0<>0<><>::uid://bvpif5807vjy1::::res://Levels/levelDesert/big_boss_desert.gd<>uid://r1bwbnrnrki7::::res://Levels/levelDesert/tileSetBigBoss/Gemini_Generated_Image_l1f6m3l1f6m3l1f6.png<>uid://cky6e5nl0nyod::::res://Levels/levelDesert/platforms/platform.tscn<>uid://2yfrtacc588v::::res://Levels/levelDesert/platforms/platformsmall.tscn<>uid://c3dh7xb6ef76q::::res://shared/coin.tscn<>uid://6mtip3ruyn::::res://enemics/BigBosses/Serp/enemy/enemy.tscn<>uid://cw6nldo3rjyyq::::res://Levels/levelDesert/background/parallax_background.tscn<>uid://co8bwstg3ea6x::::res://Levels/levelDesert/props/rock_1.webp<>uid://qd4lja3ikoiy::::res://Levels/levelDesert/Dune Relay.ogg
 big_boss_desert.gd::GDScript::3891848359172868982::1780350204::0::1::::<>Node2D<><>0<>0<><>::
 Dune Relay.ogg::AudioStreamOggVorbis::1130995541987322160::1779569577::1779569582::1::::<><><>0<>0<>c53327e50a5178b128dad8a04536a2a7<>res://.godot/imported/Dune Relay.ogg-8c1fa7891fc334c0c0f2a98ff8e5317f.oggvorbisstr::
@@ -319,7 +319,7 @@ level.gd::GDScript::5418006400233490121::1773350319::0::1::::<>Node2D<><>0<>0<><
 level.tscn::PackedScene::6120051906242158291::1781384173::0::1::::<><><>0<>0<><>::uid://08mkofgbxx70::::res://Levels/levelDesert/tileset.tres<>uid://dcblo6qkwgbkv::::res://Levels/levelDesert/levelDesert.gd<>uid://cky6e5nl0nyod::::res://Levels/levelDesert/platforms/platform.tscn<>uid://c3dh7xb6ef76q::::res://shared/coin.tscn<>uid://bxsmiv7k3fngt::::res://Levels/levelDesert/platforms/moving_platform.webp<>uid://cw6nldo3rjyyq::::res://Levels/levelDesert/background/parallax_background.tscn<>uid://bj6am5nfc0k73::::res://Levels/levelDesert/props/grass_1.webp<>uid://ddmq5iwm2qd1j::::res://Levels/levelDesert/props/flower_1.webp<>uid://bju7r7jqn8bqy::::res://Levels/levelDesert/props/grass_2.webp<>uid://upfcr5xg5fvh::::res://Levels/levelDesert/props/grass_3.webp<>uid://icddaryasunc::::res://Levels/levelDesert/props/tree_1.webp<>uid://dea1a76o6b0ix::::res://Levels/levelDesert/props/tree_2.webp<>uid://bn1vqelbcpw2g::::res://enemics/muminator/Enemymuminator.tscn<>uid://cqydct6vajobg::::res://Levels/levelDesert/props/bush_1.webp<>uid://dy5os1jnexrf1::::res://enemics/serpentus/Enemyserpentus.tscn<>uid://co8bwstg3ea6x::::res://Levels/levelDesert/props/rock_1.webp<>uid://djwm5nol3d801::::res://Levels/levelDesert/props/wind_sway.tres<>uid://c5xpotfxdi0ms::::res://Levels/levelDesert/props/fern_1.webp<>uid://crfy1osk1c1gc::::res://Levels/levelDesert/props/ground_flowers_1.webp<>uid://bvu4vgnc84r84::::res://Levels/levelDesert/props/vine_1.webp<>uid://bu54lwrkcng25::::res://Levels/levelDesert/props/vine_2.webp<>uid://qd4lja3ikoiy::::res://Levels/levelDesert/Dune Relay.ogg
 levelDesert.gd::GDScript::7302398657569243453::1781455526::0::1::::<>Node2D<><>0<>0<><>::
 tiles.webp::CompressedTexture2D::8943829051513271016::1773354724::1778776760::1::::<><><>0<>0<>869beea50198f1bcd67ea4fb8787888b<>res://.godot/imported/tiles.webp-8493ddcb316136d166e065b4fb9321a5.ctex::
-tileset.tres::TileSet::1823592762012833405::1781455526::0::1::::<><><>0<>0<><>::uid://d0ops71sk562g::::res://Levels/levelDesert/tiles.webp
+tileset.tres::TileSet::1823592762012833405::1781946758::0::1::::<><><>0<>0<><>::uid://d0ops71sk562g::::res://Levels/levelDesert/tiles.webp
 ::res://Levels/levelDesert/background/::1778776760
 cloud_1.webp::CompressedTexture2D::1402597424691276910::1773178184::1778776760::1::::<><><>0<>0<>1dbc243573fcfae1b66d4e574ac5f311<>res://.godot/imported/cloud_1.webp-543a2eb06474fdb6e3bd2ff99cfca649.ctex::
 cloud_2.webp::CompressedTexture2D::8571280549519457095::1773178318::1778776760::1::::<><><>0<>0<>e9c116023ca6ef8e24c223c93845e939<>res://.godot/imported/cloud_2.webp-3a47999dcaebbcc2a9e6e6269e1d5d6e.ctex::
@@ -334,7 +334,7 @@ moving_platform.webp::CompressedTexture2D::4038666930121436347::1773347760::1778
 one_way_platform.webp::CompressedTexture2D::212755294916014983::1773347612::1778776760::1::::<><><>0<>0<>6e9c2f367cea5df4ae87c11c3a50a27d<>res://.godot/imported/one_way_platform.webp-65cb96b2e7ce2a31643f5109c980bce2.ctex::
 platform.tscn::PackedScene::5526165836132039511::1780348242::0::1::::<><><>0<>0<><>::uid://djwm5nol3d801::::res://Levels/levelDesert/props/wind_sway.tres<>uid://bxsmiv7k3fngt::::res://Levels/levelDesert/platforms/moving_platform.webp<>uid://bj6am5nfc0k73::::res://Levels/levelDesert/props/grass_1.webp<>uid://bju7r7jqn8bqy::::res://Levels/levelDesert/props/grass_2.webp<>uid://upfcr5xg5fvh::::res://Levels/levelDesert/props/grass_3.webp<>uid://cqydct6vajobg::::res://Levels/levelDesert/props/bush_1.webp<>uid://bu54lwrkcng25::::res://Levels/levelDesert/props/vine_2.webp<>uid://bvu4vgnc84r84::::res://Levels/levelDesert/props/vine_1.webp
 platformsmall.tscn::PackedScene::1944978785822939211::1780349326::0::1::::<><><>0<>0<><>::uid://r1bwbnrnrki7::::res://Levels/levelDesert/tileSetBigBoss/Gemini_Generated_Image_l1f6m3l1f6m3l1f6.png
-::res://Levels/levelDesert/props/::1781469732
+::res://Levels/levelDesert/props/::1781946758
 bush_1.webp::CompressedTexture2D::5945594701045367560::1773350319::1778776760::1::::<><><>0<>0<>b288426cb978a00ad74636e3d770a673<>res://.godot/imported/bush_1.webp-bb1330e4894a1c714d0b5b1007c3216e.ctex::
 fern_1.webp::CompressedTexture2D::6926924127593756318::1773350319::1778776760::1::::<><><>0<>0<>489a9e9cd24d4e6ba9095c3a1351d9fc<>res://.godot/imported/fern_1.webp-f64d0c8eb658681f0d32ecb6a2be5628.ctex::
 flower_1.webp::CompressedTexture2D::7395626615497965625::1773350319::1778776760::1::::<><><>0<>0<>3c6fd23469a570ccaf98c3237a773cef<>res://.godot/imported/flower_1.webp-73af629e7561f4c57ea6382e250d432a.ctex::
@@ -347,7 +347,7 @@ tree_1.webp::CompressedTexture2D::565827040325248988::1773350319::1778776760::1:
 tree_2.webp::CompressedTexture2D::7441597796757093123::1773350319::1778776760::1::::<><><>0<>0<>49e2f459514975fa86cb43e2be5bdbcd<>res://.godot/imported/tree_2.webp-d555cf72c9991c0016fbda3efe1c8ce8.ctex::
 vine_1.webp::CompressedTexture2D::3903472584993895739::1773350319::1778776760::1::::<><><>0<>0<>704c946ce986b5854a5f75f238e0a5f6<>res://.godot/imported/vine_1.webp-4fd45c6ef648fa04964dff61658a6933.ctex::
 vine_2.webp::CompressedTexture2D::3853910507831647316::1773350319::1778776760::1::::<><><>0<>0<>0aa8326475785e7e38ed44e8af0f92fe<>res://.godot/imported/vine_2.webp-3fa7981d85d2163bd53d232a27ec2781.ctex::
-wind_sway.tres::ShaderMaterial::7837160837109431848::1781469732::0::1::::<><><>0<>0<><>::
+wind_sway.tres::ShaderMaterial::7837160837109431848::1781946758::0::1::::<><><>0<>0<><>::
 ::res://Levels/levelDesert/tileSetBigBoss/::1780255209
 Gemini_Generated_Image_l1f6m3l1f6m3l1f6.png::CompressedTexture2D::1246984241307041040::1780255159::1780255209::1::::<><><>0<>0<>3e7923690e8e0f1dea564a2b2c79cbb4<>res://.godot/imported/Gemini_Generated_Image_l1f6m3l1f6m3l1f6.png-2fd7119d1c69d5841a30029ae59ef7de.ctex::
 Gemini_Generated_Image_l1f6m3l1f6m3l1f6_org.png::CompressedTexture2D::5271731360761992352::1780254482::1780255209::1::::<><><>0<>0<>07203ec38d567fe7be7765da09c8c261<>res://.godot/imported/Gemini_Generated_Image_l1f6m3l1f6m3l1f6_org.png-3af40ed563880f482f25645bd65b98dd.ctex::
@@ -381,10 +381,10 @@ sky.webp::CompressedTexture2D::6297146059607217151::1773676255::1778776758::1:::
 moving_platform.webp::CompressedTexture2D::2867868709882225480::1773699523::1778776758::1::::<><><>0<>0<>a67342f612fdd600c84e4a77196e2f4b<>res://.godot/imported/moving_platform.webp-1cc2c092062bafd3b3ac8bd60035897f.ctex::
 one_way_platform.webp::CompressedTexture2D::195933223037667123::1773699560::1778776758::1::::<><><>0<>0<>05f390b741b381600ee9306f85b1e8ed<>res://.godot/imported/one_way_platform.webp-cf934fa6901c59be1a768ceb2a78afb0.ctex::
 platform.tscn::PackedScene::524334103337667123::1773699657::0::1::::<><><>0<>0<><>::uid://bg4hm4yq3di7q::::res://Levels/levelPolucio/platforms/moving_platform.webp<>uid://dxo7yh748damv::::res://Levels/levelPolucio/props/wind_sway.tres<>uid://cplc0fcypg2eh::::res://Levels/levelPolucio/props/grass_1.webp<>uid://clexcigndnseb::::res://Levels/levelPolucio/props/grass_3.webp<>uid://7qatphl0rfsu::::res://Levels/levelPolucio/props/grass_2.webp<>uid://cexvy7n4asmf2::::res://Levels/levelPolucio/props/bush_1.webp<>uid://cwhfsd88ldkle::::res://Levels/levelPolucio/props/vine_1.webp<>uid://cygkwni38jbcf::::res://Levels/levelPolucio/props/vine_2.webp
-::res://Levels/levelPlastics/::1781471834
+::res://Levels/levelPlastics/::1781946758
 Gemini_Generated_Image_psv2kqpsv2kqpsv2-removebg-preview.png::CompressedTexture2D::8550685106364352071::1779047970::1779047973::1::::<><><>0<>0<>2fa6ff3d9dd678094ad513ede3c1cbdf<>res://.godot/imported/Gemini_Generated_Image_psv2kqpsv2kqpsv2-removebg-preview.png-a16c46a744c5a91143e0fb1dbc7ce13f.ctex::
 level.gd::GDScript::5795094307343437628::1773676255::0::1::::<>Node2D<><>0<>0<><>::
-levelPlastics.gdshader::Shader::929477783855455170::1781469630::0::1::::<><><>0<>0<><>::
+levelPlastics.gdshader::Shader::929477783855455170::1781946758::0::1::::<><><>0<>0<><>::
 levelPlastics.tscn::PackedScene::7819401992750076843::1781469999::0::1::::<><><>0<>0<><>::uid://niiml8hetykw::::res://Levels/levelPlastics/levelPlastics.gdshader<>uid://ci1q4ppyrt4nl::::res://Levels/levelPlastics/level_plastics.gd<>uid://bx0mcaphb46mp::::res://Levels/levelPolucio/Tilesets-removebg-preview.png<>uid://dt3asf2jrjj8j::::res://Levels/levelPlastics/Gemini_Generated_Image_psv2kqpsv2kqpsv2-removebg-preview.png<>uid://b4pccofv2k1su::::res://Levels/levelPlastics/background/background_parallax_Plastics.tscn<>uid://c3dh7xb6ef76q::::res://shared/coin.tscn<>uid://cqydct6vajobg::::res://Levels/levelDesert/props/bush_1.webp<>uid://c8g88m66ncwey::::res://Levels/levelPolucio/Props-Rocks.png<>uid://cclyfj7vx0hyc::::res://enemics/enemicHomePlastic/enemyPlasticMan.tscn<>uid://djwm5nol3d801::::res://Levels/levelDesert/props/wind_sway.tres<>uid://cw43ewqr4wqrr::::res://enemics/enemicTauroPlastic/enemyTauroPlastic.tscn<>uid://co8bwstg3ea6x::::res://Levels/levelDesert/props/rock_1.webp<>uid://j131u4s61yeu::::res://Levels/levelPlastics/Pulso del Planeta.ogg
 levelPlasticsBos.tscn::PackedScene::7060735302105318671::1781471834::0::1::::<><><>0<>0<><>::uid://mo63nkh36gh5::::res://Levels/levelPlastics/level_plastics_bos.gd<>uid://niiml8hetykw::::res://Levels/levelPlastics/levelPlastics.gdshader<>uid://djwm5nol3d801::::res://Levels/levelDesert/props/wind_sway.tres<>uid://dt3asf2jrjj8j::::res://Levels/levelPlastics/Gemini_Generated_Image_psv2kqpsv2kqpsv2-removebg-preview.png<>uid://bx0mcaphb46mp::::res://Levels/levelPolucio/Tilesets-removebg-preview.png<>uid://c3dh7xb6ef76q::::res://shared/coin.tscn<>uid://b4pccofv2k1su::::res://Levels/levelPlastics/background/background_parallax_Plastics.tscn<>uid://dusuinrluk4b3::::res://enemics/BigBosses/enemyPlastic/enemyPlastic.tscn<>uid://j131u4s61yeu::::res://Levels/levelPlastics/Pulso del Planeta.ogg
 level_plastics.gd::GDScript::5389050010139787809::1781470535::0::1::::<>Node2D<><>0<>0<><>::

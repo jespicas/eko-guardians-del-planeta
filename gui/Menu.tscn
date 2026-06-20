@@ -17,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://e481ce5ub5m0" path="res://gui/plasticSelected.png" id="15_t0wh4"]
 [ext_resource type="Texture2D" uid="uid://11umwxq8rruy" path="res://gui/polucioSelected.png" id="16_w6068"]
 [ext_resource type="Texture2D" uid="uid://cb11soxbk61tk" path="res://gui/llenyataireSelected.png" id="17_nyomc"]
+[ext_resource type="Script" uid="uid://c0ujphsx1pvpq" path="res://addons/virtual_joystick_plus/virtual_joystick_plus.gd" id="18_1pu15"]
+[ext_resource type="Texture2D" uid="uid://fwwjgoutymlk" path="res://addons/virtual_joystick_plus/resources/textures/joystick_texture_5.png" id="19_2nys3"]
+[ext_resource type="Texture2D" uid="uid://d03sghwtsw3w" path="res://addons/virtual_joystick_plus/resources/textures/stick_texture_5.png" id="20_km176"]
 
 [node name="Menu" type="Control" unique_id=1818668288]
 layout_mode = 3
@@ -209,3 +212,22 @@ visible = false
 position = Vector2(348.5, 294.5)
 scale = Vector2(0.6842105, 0.7857145)
 texture = ExtResource("17_nyomc")
+
+[node name="Control" type="Control" parent="." unique_id=1746651870]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VirtualJoystickPlus" type="Control" parent="Control" unique_id=1695364731]
+custom_minimum_size = Vector2(300, 300)
+anchors_preset = 0
+offset_left = -71.0
+offset_top = 250.0
+offset_right = 229.0
+offset_bottom = 550.0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(150, 150)
+script = ExtResource("18_1pu15")
+joystick_texture = ExtResource("19_2nys3")
+stick_texture = ExtResource("20_km176")
+metadata/_custom_type_script = "uid://c0ujphsx1pvpq"
