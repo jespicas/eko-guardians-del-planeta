@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://vh7pmputa7r3" path="res://player/player.tscn" id="3_hw6k0"]
 [ext_resource type="PackedScene" uid="uid://c7ai4bigaryci" path="res://gui/pause_menu_singleplayer.tscn" id="4_5xbgu"]
 [ext_resource type="PackedScene" uid="uid://cr788n3jtq7ii" path="res://gui/hud_game.tscn" id="5_pfdgj"]
+[ext_resource type="Script" uid="uid://c0ujphsx1pvpq" path="res://addons/virtual_joystick_plus/virtual_joystick_plus.gd" id="6_5xbgu"]
+[ext_resource type="Texture2D" uid="uid://fwwjgoutymlk" path="res://addons/virtual_joystick_plus/resources/textures/joystick_texture_5.png" id="7_pfdgj"]
+[ext_resource type="Texture2D" uid="uid://d03sghwtsw3w" path="res://addons/virtual_joystick_plus/resources/textures/stick_texture_5.png" id="8_oikqu"]
 
 [node name="Game" type="Node" unique_id=1264659261]
 process_mode = 3
@@ -17,6 +20,7 @@ position = Vector2(90, 546)
 
 [node name="InterfaceLayer" type="CanvasLayer" parent="." unique_id=1171644758]
 layer = 100
+visible = false
 
 [node name="PauseMenu" parent="InterfaceLayer" unique_id=1239487998 instance=ExtResource("4_5xbgu")]
 
@@ -24,6 +28,26 @@ layer = 100
 layer = 100
 
 [node name="HudGame" parent="InterfaceLayer2" unique_id=1225320713 instance=ExtResource("5_pfdgj")]
+visible = false
+
+[node name="Control" type="Control" parent="InterfaceLayer2" unique_id=318353656]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VirtualJoystickPlus" type="Control" parent="InterfaceLayer2/Control" unique_id=1634639532]
+anchors_preset = 0
+offset_left = -73.0
+offset_top = 254.0
+offset_right = 227.0
+offset_bottom = 554.0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(150, 150)
+script = ExtResource("6_5xbgu")
+joystick_texture = ExtResource("7_pfdgj")
+stick_texture = ExtResource("8_oikqu")
+metadata/_custom_type_script = "uid://c0ujphsx1pvpq"
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="refresh_life" from="." to="InterfaceLayer2/HudGame" method="_on_refresh_life"]

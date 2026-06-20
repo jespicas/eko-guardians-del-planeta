@@ -1,14 +1,5 @@
-res://gui/Menu.tscn
+res://game_singleplayerDesert.tscn
 res://Levels/levelPlastics/levelPlastics.gdshader
-res://gui/theme.tres
-res://Levels/levelPlastics/levelPlasticsBos.tscn
 res://Levels/levelDesert/props/wind_sway.tres
-res://Levels/levelPlastics/levelPlastics.tscn
-res://Levels/levelPlastics/level_plastics.gd
-res://Levels/levelPlastics/level_plastics_bos.gd
-res://enemics/BigBosses/enemyPlastic/enemyPlastic.tscn
-res://enemics/BigBosses/enemyPlastic/BulletPlastic.gd
-res://enemics/BigBosses/enemyPlastic/enemy_plastic.gd
-res://game_singleplayerPlasticsBoss.tscn
-res://enemics/enemicHomePlastic/enemy_plastic_man.gd
-res://enemics/enemicTauroPlastic/enemy_tauro_plastic.gd
+res://gui/theme.tres
+res://Levels/levelDesert/tileset.tres

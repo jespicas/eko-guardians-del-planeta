@@ -42,6 +42,10 @@ window/stretch/scale_mode="integer"
 stretch/aspect="keep_height"
 stretch/mode="2d"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/virtual_joystick_plus/plugin.cfg")
+
 [gdnative]
 
 singletons=[]
